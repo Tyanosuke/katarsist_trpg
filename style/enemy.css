@@ -1,0 +1,113 @@
+/* -------------------------------------------------- */
+/* 能力 */
+/* -------------------------------------------------- */
+
+/* 値 */
+.status>.contents>p {
+  font-size: 1.25em;
+  text-align: right;
+}
+
+/* 見出し４ */
+.status h4 {
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------- */
+/* アクション */
+/* -------------------------------------------------- */
+
+/* タイトル */
+.card.enemy>.area-head>.title {
+  width: 300px;
+}
+
+/* データ */
+.card.enemy>.area-head>.data {
+  grid-template-columns: 20% 20% 1fr;
+}
+
+/* データ＞文章＞セル：全幅 */
+.card.enemy>.area-head>.data>.cell:nth-child(n+4) {
+  grid-column: 1 / 5;
+}
+
+/* 箇条書きリスト */
+.card.enemy ul {
+  padding-left: 1.5em;
+}
+
+/* カード */
+.card.enemy {
+  background-color: var(--color-enemy);
+}
+
+/* ヘッダー */
+.card.enemy>.area-head {
+  background-color: var(--color-enemy);
+  border-color: var(--color-enemy);
+}
+
+/* タイトル：末尾要素 */
+.card.enemy>.area-head>.title::after {
+  content: "敵";
+}
+
+/* データ＞文章＞セル＞ */
+.card.enemy>.area-head>.data>.cell {
+  border-color: var(--color-enemy);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.enemy>.area-head>.data>.cell>.cover {
+  background-color: var(--color-enemy-alpha);
+}
+
+/* 文タイトル */
+.card.enemy .area_title {
+  color: var(--color-enemy);
+}
+
+/* 条件文 */
+.card.enemy>.area-condition {
+  border-color: var(--color-enemy);
+}
+
+/* 条件文：末尾要素 */
+.card.enemy>.area-condition::after {
+  background: var(--color-enemy);
+}
+
+/* 説明文 */
+.card.enemy>.area-detail {
+  border-color: var(--color-enemy);
+}
+
+/* 説明文：分岐＞条件 */
+.card.enemy>.area-detail .area-detail>p>.condition {
+  background-color: var(--color-enemy-alpha);
+}
+
+/* -------------------------------------------------- */
+/* アクションパターン */
+/* -------------------------------------------------- */
+
+/* テーブル */
+table.action {
+  table-layout: fixed;
+}
+
+/* 「ラウンド」セル */
+table.action tr:first-child>*:first-child {
+  width: 4em;
+}
+
+/* 「エリア」セル */
+table.action tr:first-child>*:nth-child(2) {
+  width: 4em;
+}
+
+/* セル */
+table.action tr>* {
+  word-break: keep-all;
+}

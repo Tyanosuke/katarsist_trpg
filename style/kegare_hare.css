@@ -1,0 +1,59 @@
+/* -------------------------------------------------- */
+/* ケガレ */
+/* -------------------------------------------------- */
+
+/* タイトル */
+.card.nazo>.area-head>.title {
+  width: 300px;
+}
+
+/* データ */
+.card.nazo>.area-head>.data {
+  grid-template-columns: 20% 1fr !important;
+}
+
+/* データ＞文章＞セル：全幅 */
+.card.nazo>.area-head>.data>.cell:nth-child(1) {
+  grid-column: 1 / 4;
+}
+
+/* カード */
+/* .card.nazo {
+  background-color: var(--color-nazo);
+} */
+
+/* ヘッダー */
+/* .card.nazo>.area-head {
+  background-color: var(--color-nazo);
+  border-color: var(--color-nazo);
+} */
+
+/* タイトル：末尾要素 */
+.card.enemy.nazo>.area-head>.title::after {
+  content: "穢";
+}
+
+/* データ＞文章＞セル＞ */
+/* .card.nazo>.area-head>.data>.cell {
+  border-color: var(--color-nazo);
+} */
+
+/* データ＞文章＞セル＞見出し */
+/* .card.nazo>.area-head>.data>.cell>.cover {
+  background-color: var(--color-nazo-alpha);
+} */
+
+/* 条件文 */
+/* .card.nazo>.area-condition {
+  border-color: var(--color-nazo);
+} */
+
+/* 説明文 */
+/* .card.nazo>.area-detail {
+  border-color: var(--color-nazo);
+} */
+
+/* 説明文：分岐＞条件 */
+/* .card.nazo>.area-detail .area-detail>p>.condition {
+  background-color: var(--color-nazo-alpha);
+} */

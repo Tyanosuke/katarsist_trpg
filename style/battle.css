@@ -1,0 +1,44 @@
+/* -------------------------------------------------- */
+/* エリア */
+/* -------------------------------------------------- */
+
+/* エリア */
+.area {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    height: fit-content;
+    border: solid 3px var(--color-sub);
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+}
+
+/* エリア */
+.area>[class^="area"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 4em;
+}
+
+/* フロントエリア */
+.area>.area-front {
+    background: rgba(128, 0, 0, 20%);
+}
+
+/* バックエリア */
+.area>.area-back {
+    background: rgba(0, 0, 128, 20%);
+}
+
+/* エリア番号 */
+.area>[class^="area"]>.num {
+    background: none;
+    position: absolute;
+    left: 8px;
+    color: var(--color-main);
+    font-size: 3em;
+}

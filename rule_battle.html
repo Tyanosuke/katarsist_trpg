@@ -1,0 +1,591 @@
+<head>
+  <title>カタルシスフェイズ - 心界カタルシス</title>
+
+  <link rel="stylesheet" href="style/base.css" type="text/css" />
+  <link rel="stylesheet" href="style/rule.css" type="text/css" />
+  <link rel="stylesheet" href="style/battle.css" type="text/css" />
+  <link rel="stylesheet" href="style/arts.css" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>カタルシスフェイズ</h1>
+
+    <a class="button-prev" href="index.html">戻る</a>
+  </header>
+
+  <main>
+    <section>
+      <p>
+        　<span class="keyword">カタルシスフェイズ</span>とは、クライエントの心に潜むトラウマの具現――シャドウ――と直接対決するシーンです。<br>
+        　他のシステムでいうところのカタルシスフェイズですが、武器や肉体を使って戦うのではなく、言動で相手を説得したり、落ち着かせたり、あくまで対話によってトラウマを解消させるものです。
+      </p>
+    </section>
+
+    <!-- エリア -->
+    <section id="battle_area">
+      <div class="sticky">
+        <h2>
+          エリア
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="d-flex gap">
+
+          <!-- 左 -->
+          <div class="contents">
+            <div class="inner_contents">
+              <p>
+                　カタルシスフェイズ中のキャラクターの立ち位置を示すのが、右の図で示す<span class="keyword">エリア</span>です。
+              </p>
+            </div>
+
+            <section id="area-5">
+              <div class="sticky">
+                <h3>
+                  エリア：5　【意識】
+                </h3>
+              </div>
+
+              <div class="contents">
+                <div class="inner_contents">
+                  <p>
+                    　このエリアにシャドウを移動させることで、ＰＣの勝利となります。<br>
+                    　ＰＣがこのエリアに移動させられると、【脱落】状態となります。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="area-0">
+              <div class="sticky">
+                <h3>
+                  エリア：0　【無意識】
+                </h3>
+              </div>
+
+              <div class="contents">
+                <div class="inner_contents">
+                  <p>
+                    　このエリアにシャドウを移動すると、ＰＣの敗北となります。<br>
+                    　ＰＣがこのエリアに移動させられると、戦闘から脱落します。
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- 右 -->
+          <div class="contents">
+            <div class="inner_contents">
+              <div class="area">
+                <div class="area-front">
+                  <span class="num">5</span>【意識】
+                </div>
+
+                <div class="area-back">
+                  <span class="num">4</span>
+                </div>
+
+                <div class="area-back">
+                  <span class="num">3</span>ＰＣ初期位置
+                </div>
+
+                <div class="area-back">
+                  <span class="num">2</span>シャドウ初期位置
+                </div>
+
+                <div class="area-back">
+                  <span class="num">1</span>
+                </div>
+
+                <div class="area-front">
+                  <span class="num">0</span>【無意識】
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ＰＣの状態 -->
+    <section id="status">
+      <div class="sticky">
+        <h2>
+          ＰＣの状態
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　ＰＣはスキルの効果や特定の条件により、様々な状態になります。
+          </p>
+        </div>
+
+        <!-- 脱落 -->
+        <section id="battle-down">
+          <div class="sticky">
+            <h3>
+              脱落
+            </h3>
+          </div>
+
+          <div class="contents">
+            <div class="inner_contents">
+              <p>
+                　エリア『０』か『５』に移動したＰＣは、戦闘から<span class="keyword">脱落</span>します。<br>
+                　この状態では、エリア上から取り除かれ、一切の行動ができなくなります。<br>
+                　また、ＰＣ全員が脱落した場合、敗北となります。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ステータス変化 -->
+        <section id="battle-status-up-down">
+          <div class="sticky">
+            <h3>
+              ステータス変化
+            </h3>
+          </div>
+
+          <div class="contents">
+            <div class="inner_contents">
+              <p>
+                　スキルの効果により、<span class="keyword">【ステータス変化】</span>が付与されることがあります。<br>
+                　ステータス変化は【（ステータス名）：（プラス／マイナス）（レベル）】のように表されます。<br>
+                　レベルは増減量と継続期間を表しています。各キャラクターのターン終了時に減少していき、０になると効果が消滅します。
+              </p>
+
+              <div class="inner_contents">
+                <h4>
+                  例
+                </h4>
+
+                <table>
+                  <tr>
+                    <th>ステータス変化</th>
+                    <th>付与後１ターン目</th>
+                    <th>２ターン目</th>
+                    <th>３ターン目</th>
+                    <th>４ターン目</th>
+                  </tr>
+
+                  <tr>
+                    <th>【勇気：＋１】</th>
+                    <td>＋１</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <th>【知恵：＋２】</th>
+                    <td>＋２</td>
+                    <td>＋１</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr>
+                    <th>【愛情：－３】</th>
+                    <td>－３</td>
+                    <td>－２</td>
+                    <td>－１</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- カタルシスフェイズの流れ -->
+    <section id="battle">
+      <div class="sticky">
+        <h2>
+          カタルシスフェイズの流れ
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　カタルシスフェイズは、以下の流れで進行します。<br>
+            　<a href="#battle_finish">終了条件</a>を満たすまで、ラウンドを繰り返します。
+          </p>
+        </div>
+
+        <div class="list_container">
+
+          <div class="process">
+            <div class="title">
+              <span class="num">1</span><a href="#battle_start">フェイズ開始</a>
+            </div>
+          </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">2</span><a href="#round">ラウンド</a>
+            </div>
+
+            <div class="list_container">
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-1</span><a href="#round_start">ラウンド開始</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-1-1</span><a href="#show_enemy_action">エネミーアクションのセット</a><br>
+                  <span class="num">2-1-3</span><a href="#timing-round_start">タイミング：ラウンド開始</a>
+                </div>
+              </div>
+
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-2</span><a href="#turn-pc">ＰＣのターン</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-2-1</span><a href="#timing-sub_action">サブアクション</a><br>
+                  <span class="num">2-2-2</span><a href="#timing-main_action">メインアクション</a><br>
+                  <span class="num">2-2-3</span><a href="#turn_end">【ステータス変化】の更新</a>
+                </div>
+              </div>
+
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-3</span><a href="#round_end">シャドウのターン</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-3-1</span><a href="#enemy_action">エネミーアクションの実行</a>
+                </div>
+              </div>
+
+              <div class="process">
+                <div class="title">
+                  <span class="num">2-4</span><a href="#round_end">ラウンド終了</a>
+                </div>
+
+                <div class="detail">
+                  <span class="num">2-4-1</span><a href="#timing-round_end">タイミング：ラウンド終了</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="process">
+            <div class="title">
+              <span class="num">3</span><a href="#battle_end">フェイズ終了</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 【１】フェイズ開始 -->
+    <section id="battle_start">
+      <div class="sticky">
+        <h2>
+          <span class="num">1</span>フェイズ開始
+        </h2>
+      </div>
+
+      <div class="contents">
+        <div class="inner_contents">
+          <p>
+            　カタルシスフェイズが開始された際、以下の処理を順に行います。
+          </p>
+        </div>
+
+        <!-- ＰＣとシャドウの配置 -->
+        <section>
+          <div class="sticky">
+            <h3>
+              <span class="num">1-1</span>ＰＣとシャドウの配置
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              ＰＣとシャドウを、それぞれの初期位置に配置します。
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- 【２】ラウンド -->
+    <section id="round">
+      <div class="sticky">
+        <h2>
+          <span class="num">2</span>ラウンド
+        </h2>
+      </div>
+
+      <div class="contents">
+
+        <!-- 【２－１】ラウンド開始 -->
+        <section id="round_start">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-1</span>ラウンド開始
+            </h3>
+          </div>
+
+          <div class="contents">
+            <div class="inner_contents">
+              <p>
+                　以下の処理を行います。
+              </p>
+            </div>
+
+            <!-- エネミーアクションの開示 -->
+            <section id="show_enemy_action">
+              <h4>
+                <span class="num">2-1-1</span>エネミーアクションのセット
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　このラウンドで敵が使用するエネミーアクションをセットします。これらは、シナリオの記載通りに行います。<br>
+                  　セットされたエネミーアクションは、<span class="num">2-3-2</span><a href="#enemy_action">エネミーアクションの実行</a>で実行されます。
+                </p>
+              </div>
+            </section>
+
+            <!-- タイミング：ラウンド開始 -->
+            <section id="timing-round_start">
+              <h4>
+                <span class="num">2-1-3</span>タイミング：ラウンド開始
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　各ＰＣは、タイミングが『ラウンド開始』のアクションを１つ使用できます。
+                </p>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- 【２－２】ターン -->
+        <section id="turn-pc">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-2</span>ターン
+            </h3>
+          </div>
+
+          <div class="contents">
+            <div class="inner_contents">
+              <p>
+                　各ＰＣは、それぞれ<span class="keyword">ターン</span>を行います。順番は、ＰＣ間で相談して決めてください。<br>
+                　ターンはＰＣごとに、以下のように処理します。
+              </p>
+            </div>
+
+            <!-- サブアクション -->
+            <section id="timing-turn">
+              <h4>
+                <span class="num">2-2-1</span>サブアクション
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　タイミングが『サブアクション』のスキルを、１つ使用することができます。
+                </p>
+              </div>
+            </section>
+
+            <!-- メインアクション -->
+            <section id="timing-turn">
+              <h4>
+                <span class="num">2-2-2</span>メインアクション
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　タイミングが『メインアクション』のスキルを、１つ使用することができます。
+                </p>
+              </div>
+            </section>
+
+            <!-- 【ステータス変化】の更新 -->
+            <section id="timing-turn">
+              <h4>
+                <span class="num">2-2-3</span>【ステータス変化】の更新
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　ターンを行ったＰＣが【ステータス変化】を受けていた場合、そのレベルを１つ減少させます。レベルが０になったものは、効果が消滅します。
+                </p>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- 【２－３】敵ターン -->
+        <section id="turn-enemy">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-3</span>敵ターン
+            </h3>
+          </div>
+
+          <div class="contents">
+
+            <!-- エネミーアクションの実行 -->
+            <section id="enemy_action">
+              <h4>
+                <span class="num">2-3-1</span>エネミーアクションの実行
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　敵にセットされているエネミーアクションが実行され、その効果が適用されます。対象はこの時点でＧＭが決定します。なお、アクションを実行する順番はシナリオで指定されます。<br>
+                  　ブレイクされている場合、効果が変わることに注意してください。
+                </p>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- 【２－３】ラウンド終了 -->
+        <section id="round_end">
+          <div class="sticky">
+            <h3>
+              <span class="num">2-3</span>ラウンド終了
+            </h3>
+          </div>
+
+          <div class="contents">
+
+            <!-- タイミング：ラウンド終了 -->
+            <section id="timing-round_end">
+              <h4>
+                <span class="num">2-3-1</span>タイミング：ラウンド終了
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　各ＰＣは、タイミングが『ラウンド終了』のアクションを１つ使用できます。
+                </p>
+              </div>
+            </section>
+
+            <!-- ラウンド中効果の消滅 -->
+            <section id="effect_clear">
+              <h4>
+                <span class="num">2-3-2</span>ラウンド中効果の消滅
+              </h4>
+
+              <div class="contents">
+                <p>
+                  　「このラウンド中、～」のように書かれた効果が、全て消滅します。
+                </p>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- 【３】フェイズ終了 -->
+    <section id="battle_end">
+      <div class="sticky">
+        <h2>
+          <span class="num">3</span>フェイズ終了
+        </h2>
+      </div>
+
+      <div class="contents">
+
+        <!-- カタルシスフェイズの終了条件 -->
+        <section id="battle_finish">
+          <div class="sticky">
+            <h3>
+              カタルシスフェイズの終了条件
+            </h3>
+          </div>
+
+          <div class="contents">
+            <div class="inner_contents">
+              <p>
+                　カタルシスフェイズが終了する条件は、以下の３つがあります。<br>
+                　カタルシスフェイズが終了した場合、<a href="" target="_blank">エンディングフェイズ</a>へと移行します。
+              </p>
+            </div>
+
+            <div class="contents">
+              <!-- ボスの撃破 -->
+              <section id="battle-victory">
+                <h4>
+                  ボスの撃破
+                </h4>
+
+                <div class="contents">
+                  <p>
+                    　ボスのツミを０点にした場合、カタルシスフェイズが終了します。ボスが複数いる場合、それら全てのツミを０点にする必要があります。<br>
+                    　エンディングとしては、事件が解決し、グッドエンドとなるでしょう。
+                  </p>
+                </div>
+              </section>
+
+              <!-- ＰＣの全滅 -->
+              <section id="battle-defeat">
+                <h4>
+                  ＰＣの全滅
+                </h4>
+
+                <div class="contents">
+                  <p>
+                    　ＰＣ全員がカタルシスフェイズ不能、あるいは撤退状態になった場合、カタルシスフェイズが終了します。<br>
+                    　エンディングとしては、事件が解決せず、バッドエンドとなるでしょう。
+                  </p>
+                </div>
+              </section>
+
+              <!-- シナリオで設定された条件を満たす -->
+              <section>
+                <h4>
+                  シナリオで設定された条件を満たす
+                </h4>
+
+                <div class="contents">
+                  <p>
+                    　シナリオで設定された条件を満たした場合、カタルシスフェイズが終了します。<br>
+                    　エンディングがどうなるかは、シナリオ次第です。
+                  </p>
+                </div>
+              </section>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+  </main>
+</body>
+
+<script src="js/script.js"></script>

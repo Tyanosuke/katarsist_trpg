@@ -1,0 +1,418 @@
+/* -------------------------------------------------- */
+/* 定数 */
+/* -------------------------------------------------- */
+
+:root {
+  /* アクション：下部マージン */
+  --margin-arts: 12px;
+
+  /* 《心》：サブカラー */
+  --color-astral: rgb(128, 160, 128);
+
+  /* 《心》：サブカラー（透過） */
+  --color-astral-alpha: rgb(210, 230, 210);
+
+  /* 《技》：サブカラー */
+  --color-mental: rgb(128, 128, 160);
+
+  /* 《技》：サブカラー（透過） */
+  --color-mental-alpha: rgb(210, 210, 230);
+
+  /* 《体》：サブカラー */
+  --color-ether: rgb(160, 128, 128);
+
+  /* 《体》：サブカラー（透過） */
+  --color-ether-alpha: rgb(230, 210, 210);
+
+  /* エネミー：サブカラー */
+  --color-enemy: rgb(160, 128, 160);
+
+  /* エネミー：サブカラー（透過） */
+  --color-enemy-alpha: rgb(230, 210, 230);
+}
+
+/* -------------------------------------------------- */
+/* カバー */
+/* -------------------------------------------------- */
+
+.t-cover {
+  background: #eee;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0 4px;
+  color: var(--color-sub);
+}
+
+/* -------------------------------------------------- */
+/* テーブル */
+/* -------------------------------------------------- */
+
+/* 説明テーブル＞セル */
+table.tutorial td {
+  text-align: left;
+}
+
+/* 説明テーブル＞ヘッダーセル */
+table.tutorial th {
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* タグジャンプ */
+/* -------------------------------------------------- */
+
+/* ヘッダー×２分マージン */
+.jump_tag {
+  margin-top: calc(var(--sticky-row-height) * -2 - var(--header-height) - var(--margin-arts));
+  padding-top: calc(var(--sticky-row-height) * 2 + var(--header-height) + var(--margin-arts));
+}
+
+/* -------------------------------------------------- */
+/* クラスタイプ */
+/* -------------------------------------------------- */
+
+/* 共通 */
+.class_type {
+  margin-top: 16px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* プライマリ */
+.class_type.primary {
+  color: var(--color-ether);
+}
+
+/* セカンダリ */
+.class_type.secondary {
+  color: var(--color-mental);
+}
+
+/* -------------------------------------------------- */
+/* カード */
+/* -------------------------------------------------- */
+
+/* コンテナ */
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+/* カード */
+.card {
+  background: var(--color-sub);
+  border-radius: 8px;
+  width: 950px;
+  margin-top: var(--margin-arts);
+  padding: 2px;
+  position: relative;
+  box-sizing: border-box
+}
+
+/* ヘッダー */
+.card>.area-head {
+  display: flex;
+  background: var(--color-sub);
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+}
+
+/* タイトル */
+.card>.area-head>.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  padding: 12px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right 8px bottom 50%;
+}
+
+/* タイトル：末尾要素 */
+.card>.area-head>.title::after {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  color: #fff;
+  font-family: kanji_font;
+  font-size: 50px;
+  opacity: 0.25;
+  transform: translate(0, -50%);
+}
+
+/* タイトル：常時 */
+.card.passive>.area-head>.title {
+  background-image: url(../img/arts/passive.png);
+}
+
+/* タイトル：ルビ */
+.card>.area-head>.title>span.ruby {
+  font-size: 0.75em;
+  line-height: 1;
+}
+
+/* タイトル：メイン */
+.card>.area-head>.title>span.main {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* データ */
+.card>.area-head>.data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex: 1;
+  background: #fff;
+  border-top-right-radius: 8px;
+  color: #000;
+}
+
+/* データ＞文章＞セル */
+.card>.area-head>.data>.cell {
+  display: flex;
+  align-items: center;
+  border: solid 1px var(--color-sub);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card>.area-head>.data>.cell>.cover {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  background: var(--color-sub-alpha);
+  margin-right: 12px;
+  padding: 2px 8px;
+  box-sizing: border-box;
+  align-items: center;
+  color: #000 !important;
+}
+
+/* 説明文 */
+.card>.area-detail {
+  background: #fff;
+  border: solid 1px var(--color-sub);
+  border-radius: 0 0 8px 8px;
+  padding: 8px;
+}
+
+/* 説明文：条件 */
+.card>.area-detail>p.judge {
+  display: flex;
+}
+
+/* 説明文：条件：間隔 */
+.card>.area-detail>p+p.judge {
+  margin-top: 0.5em;
+}
+
+/* 説明文：条件 */
+.card>.area-detail>p.judge>.condition {
+  display: inline-block;
+  background: var(--color-sub-alpha);
+  height: fit-content;
+  margin-right: 8px;
+  padding: 0 8px;
+  padding-right: 16px;
+  word-break: keep-all;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 100% 100%, 0 100%);
+}
+
+/* 説明文：フレーバー */
+.card .note {
+  margin: 0;
+  margin-top: 1em;
+  color: var(--color-sub);
+  text-align: right;
+  transform: skewX(-20deg);
+}
+
+/* -------------------------------------------------- */
+/* アクションの見方 */
+/* -------------------------------------------------- */
+
+/* 効果＞分岐 */
+#arts-tutorial .branch {
+  margin: 0.5em 0 0 0.75em;
+}
+
+/* 説明文：フレーバー */
+#arts-tutorial .card>.area-detail>.note {
+  color: #000;
+  transform: none;
+}
+
+/* -------------------------------------------------- */
+/* カード：《心》 */
+/* -------------------------------------------------- */
+
+/* カード */
+.card.astral {
+  background-color: var(--color-astral);
+}
+
+/* ヘッダー */
+.card.astral>.area-head {
+  background-color: var(--color-astral);
+  border-color: var(--color-astral);
+}
+
+/* データ＞文章＞セル＞ */
+.card.astral>.area-head>.data>.cell {
+  border-color: var(--color-astral);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.astral>.area-head>.data>.cell>.cover {
+  background-color: var(--color-astral-alpha);
+}
+
+/* 文タイトル */
+.card.astral .area_title {
+  color: var(--color-astral);
+}
+
+/* 条件文 */
+.card.astral>.area-condition {
+  border-color: var(--color-astral);
+}
+
+/* 条件文：末尾要素 */
+.card.astral>.area-condition::after {
+  background: var(--color-astral);
+}
+
+/* 説明文 */
+.card.astral>.area-detail {
+  border-color: var(--color-astral);
+}
+
+/* 説明文：分岐＞条件 */
+.card.astral>.area-detail .area-detail>p>.condition {
+  background-color: var(--color-astral-alpha);
+}
+
+/* -------------------------------------------------- */
+/* カード：《技》 */
+/* -------------------------------------------------- */
+
+/* カード */
+.card.mental {
+  background-color: var(--color-mental);
+}
+
+/* ヘッダー */
+.card.mental>.area-head {
+  background-color: var(--color-mental);
+  border-color: var(--color-mental);
+}
+
+/* データ＞文章＞セル＞ */
+.card.mental>.area-head>.data>.cell {
+  border-color: var(--color-mental);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.mental>.area-head>.data>.cell>.cover {
+  background-color: var(--color-mental-alpha);
+}
+
+/* 文タイトル */
+.card.mental .area_title {
+  color: var(--color-mental);
+}
+
+/* 条件文 */
+.card.mental>.area-condition {
+  border-color: var(--color-mental);
+}
+
+/* 条件文：末尾要素 */
+.card.mental>.area-condition::after {
+  background: var(--color-mental);
+}
+
+/* 説明文 */
+.card.mental>.area-detail {
+  border-color: var(--color-mental);
+}
+
+/* 説明文：分岐＞条件 */
+.card.mental>.area-detail .area-detail>p>.condition {
+  background-color: var(--color-mental-alpha);
+}
+
+/* -------------------------------------------------- */
+/* カード：《体》 */
+/* -------------------------------------------------- */
+
+/* カード */
+.card.ether {
+  background-color: var(--color-ether);
+}
+
+/* ヘッダー */
+.card.ether>.area-head {
+  background-color: var(--color-ether);
+  border-color: var(--color-ether);
+}
+
+/* データ＞文章＞セル＞ */
+.card.ether>.area-head>.data>.cell {
+  border-color: var(--color-ether);
+}
+
+/* データ＞文章＞セル＞見出し */
+.card.ether>.area-head>.data>.cell>.cover {
+  background-color: var(--color-ether-alpha);
+}
+
+/* 文タイトル */
+.card.ether .area_title {
+  color: var(--color-ether);
+}
+
+/* 条件文 */
+.card.ether>.area-condition {
+  border-color: var(--color-ether);
+}
+
+/* 条件文：末尾要素 */
+.card.ether>.area-condition::after {
+  background: var(--color-ether);
+}
+
+/* 説明文 */
+.card.ether>.area-detail {
+  border-color: var(--color-ether);
+}
+
+/* 説明文：分岐＞条件 */
+.card.ether>.area-detail .area-detail>p>.condition {
+  background-color: var(--color-ether-alpha);
+}
+
+/* -------------------------------------------------- */
+/* タグジャンプ */
+/* -------------------------------------------------- */
+
+/* 強調表示 */
+.jump_tag.flash .title {
+  animation: flashSmooth 1s ease-in-out 4 alternate;
+}
+
+/* 強調表示：アニメーション */
+@keyframes flashSmooth {
+
+  0%,
+  100% {
+    color: inherit;
+  }
+
+  50% {
+    color: #ff8;
+  }
+
+}

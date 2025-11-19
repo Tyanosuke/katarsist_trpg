@@ -1,0 +1,13 @@
+/* -------------------------------------------------- */
+/* 判定 */
+/* -------------------------------------------------- */
+
+/* テーブル＞「難度」セル */
+table.difficulty>tbody>tr:first-child>th:first-child {
+  width: 80px;
+}
+
+/* テーブル＞「目安」セル */
+table.difficulty>tbody>tr:first-child>th:last-child {
+  width: 40%;
+}

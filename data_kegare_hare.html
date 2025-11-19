@@ -1,0 +1,216 @@
+<head>
+  <title>トラウマ - 心界カタルシス</title>
+
+  <link rel="stylesheet" href="style/base.css" type="text/css" />
+  <link rel="stylesheet" href="style/arts.css" type="text/css" />
+  <link rel="stylesheet" href="style/enemy.css" type="text/css" />
+  <link rel="stylesheet" href="style/kegare_hare.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <h1>トラウマ</h1>
+
+    <a class="button-prev" href="index.html">戻る</a>
+  </header>
+
+  <main>
+
+    <!-- アクションの見方 -->
+    <section class="acordion">
+      <div class="sticky">
+        <h2>
+          ケガレの見方
+
+          <button class="button-acordion">
+            <span>閉じる</span>
+            <span>開く</span>
+          </button>
+        </h2>
+      </div>
+
+      <div class="contents">
+
+        <!-- 見本 -->
+        <section>
+          <div class="cards">
+            <div class="card enemy nazo">
+              <div class="area-head">
+                <div class="title">
+                  <span class="main">①</span>
+                </div>
+
+                <div class="data">
+                  <span class="cell">
+                    <span class="cover">公開条件</span>②
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">強度</span>③
+                  </span>
+
+                  <span class="cell">
+                    <span class="cover">使用技能</span>④
+                  </span>
+                </div>
+              </div>
+
+              <div class="area-condition">
+                <p>
+                  ⑤
+                </p>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  ⑥
+                </p>
+
+                <p>
+                  <span class="condition">ハレ</span>⑦
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 名称 -->
+        <section>
+          <h4>
+            ①名称
+          </h4>
+
+          <p>
+            　名称です。
+          </p>
+        </section>
+
+        <!-- 公開条件 -->
+        <section>
+          <h4>
+            ②公開条件
+          </h4>
+
+          <p>
+            　この条件が満たされた場合に公開され、カウンセリング判定が可能になります。
+          </p>
+        </section>
+
+        <!-- 強度 -->
+        <section>
+          <h4>
+            ③強度
+          </h4>
+
+          <p>
+            　必要なカウンセリング判定の成功数です。一度の判定で満たす必要はなく、ラウンド中の合計成功数がこの値に達すれば、解明したという扱いになります。
+          </p>
+        </section>
+
+        <!-- 対象 -->
+        <section>
+          <h4>
+            ④使用技能
+          </h4>
+
+          <p>
+            　カウンセリング判定で使用できる技能です。「／」区切りで複数記載されている場合、ＰＣごとにその中から選んで判定を行なうことができます。
+          </p>
+        </section>
+
+        <!-- 謎題 -->
+        <section>
+          <h4>
+            ⑤<ruby>謎題<rt>めいだい</rt></ruby>
+          </h4>
+
+          <p>
+            　解明前の情報です。
+          </p>
+        </section>
+
+        <!-- 真相 -->
+        <section>
+          <h4>
+            ⑥真相
+          </h4>
+
+          <p>
+            　解明後の情報です。
+          </p>
+        </section>
+
+        <!-- ハレ -->
+        <section>
+          <h4>
+            ⑦ハレ
+          </h4>
+
+          <p>
+            　解明後にＰＣが得られる効果です。
+          </p>
+        </section>
+      </div>
+    </section>
+
+    <!-- 汎用ケガレ -->
+    <section>
+      <div class="sticky">
+        <h2>
+          汎用ケガレ
+        </h2>
+      </div>
+
+      <div class="contents cards">
+
+        <!-- 先輩ハレビトの証言 -->
+        <div class="card enemy nazo">
+          <div class="area-head">
+            <div class="title">
+              <span class="main">先輩ハレビトの証言</span>
+            </div>
+
+            <div class="data">
+              <span class="cell">
+                <span class="cover">公開条件</span>１ラウンド目開始時
+              </span>
+
+              <span class="cell">
+                <span class="cover">強度</span>２
+              </span>
+
+              <span class="cell">
+                <span class="cover">使用技能</span>《心》＋〈博愛〉
+              </span>
+            </div>
+          </div>
+
+          <div class="area-condition">
+            <p>
+              　昼から飲んだくれている先輩ハレビトは、致命傷を受けていないものの、敗走したことを恥じているようだ。<br>
+              　大人げないなどと思うなかれ。それは、彼がハレビトの仕事を大切に思っている証左でもある。<br>
+              　彼から、何が起きたかを聞き出そう。
+            </p>
+          </div>
+
+          <div class="area-detail">
+            <p>
+              　彼が詳細を語らなかったのは、頭に衝撃を受けており、当時の記憶があやふやだったからでもあった。<br>
+              　彼は決してハレビトとして弱いわけではなく、だが、不意に体勢を崩され、負傷したのだった。<br>
+              　――だが、初めから想定されている不意打ちなど、迎え撃つに難くない。
+            </p>
+
+            <p>
+              <span class="condition">ハレ</span>特定のエネミーアクションの性能が変化する。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</body>
+
+<script src="js/script.js"></script>

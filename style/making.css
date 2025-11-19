@@ -1,0 +1,46 @@
+/* -------------------------------------------------- */
+/* クラス */
+/* -------------------------------------------------- */
+
+/* ２列 */
+.grid-class {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 48px;
+}
+
+/* ２列＞セクション */
+.grid-class>section {
+  margin: 0;
+  padding-top: 0;
+}
+
+/* さらに２列 */
+.divide-2 {
+  display: flex;
+  width: 100%;
+}
+
+/* さらに２列＞文章 */
+.divide-2>p {
+  flex: 1;
+  margin: 0;
+  padding-right: 24px;
+}
+
+/* クラスイメージ */
+.class_image {
+  display: flex;
+}
+
+/* クラスイメージ＞画像 */
+.class_image img {
+  width: auto;
+  height: 200px;
+}
+
+/* クラスイメージ＞画像（右） */
+.class_image img:nth-child(2) {
+  margin-left: -40px;
+  z-index: -1;
+}
