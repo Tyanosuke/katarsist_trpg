@@ -567,7 +567,7 @@
               <div class="area-detail">
                 <p>
                   自身に【印象：＋１】を与えて使用する。<br>
-                  このラウンド中、自身が他者に与える【印象】のレベルに＋１する。
+                  このラウンド中、自身が《干渉》判定に成功した際、その判定の対象に【印象：±１】を追加で与える。
                 </p>
 
                 <p class="note">力強い語気や、インパクトの強い言葉で呼びかける。</p>
@@ -603,7 +603,7 @@
 
               <div class="area-detail">
                 <p>
-                  対象に【｛コストにしたダイスの属性｝：＋１】与える。
+                  対象に【｛コストにしたダイスに対応するステータス｝：＋１】を与える。
                 </p>
 
                 <p class="note">やる気を引き出す言葉や動作。</p>
@@ -688,7 +688,7 @@
               <div class="area-detail">
                 <p>
                   自身のスキルにより、他ＰＣのステータスを上昇させた際に使用できる。<br>
-                  自身に【勇気：＋１】を与える。
+                  自身に【勇気：＋２】を与える。
                 </p>
 
                 <p class="note">ファンと共に楽しむことこそ、アイドルの本懐だ。</p>
@@ -736,7 +736,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［勇］
+                    <span class="cover">コスト</span>［勇］［知］
                   </div>
 
                   <div class="cell">
@@ -783,7 +783,7 @@
               <div class="area-detail">
                 <p>
                   自身に【自制：－１】を与えて使用する。<br>
-                  このラウンド中、自身のメインアクション判定に＋２する。
+                  このラウンド中、自身の判定に＋２する。
                 </p>
 
                 <p class="note">情熱を秘めた言動。しかし、それを鬱陶しく思う人もいるかもしれない。</p>
@@ -854,7 +854,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［勇］［勇］
+                    <span class="cover">コスト</span>［勇］［Ｘ］
                   </div>
 
                   <div class="cell">
@@ -866,7 +866,7 @@
               <div class="area-detail">
                 <p>
                   自身がエリア『４』にいる場合に使用できる。<br>
-                  このラウンド中、対象が行うメインアクション判定に＋１する。
+                  このラウンド中、対象が行う判定に＋１する。
                 </p>
 
                 <p class="note">歌や踊り、ギャグなどで、自身と仲間のテンションを上げる。</p>
@@ -914,7 +914,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［知］
                   </div>
 
                   <div class="cell">
@@ -932,39 +932,39 @@
               </div>
             </div>
 
-            <!--  -->
+            <!-- スルースキル -->
             <div class="card astral">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
+                  <span class="main">スルースキル</span>
                 </div>
 
                 <div class="data">
                   <div class="cell">
-                    <span class="cover">フェイズ</span>
+                    <span class="cover">フェイズ</span>カタルシス
                   </div>
 
                   <div class="cell">
-                    <span class="cover">タイミング</span>
+                    <span class="cover">タイミング</span>※
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［知］［知］
                   </div>
 
                   <div class="cell">
-                    <span class="cover">対象</span>
+                    <span class="cover">対象</span>自身
                   </div>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-
+                  自身が【印象：－１】を受けた際に使用できる。<br>
+                  その【印象】を無効化する。
                 </p>
 
-                <p class="note">。</p>
+                <p class="note">相手の発言を真に受けない処世術。</p>
               </div>
             </div>
 
@@ -1009,7 +1009,7 @@
 
               <div class="area-detail">
                 <p>
-                  あなたの《調査》判定に＋１する。
+                  自身が行う《調査》判定に＋１する。
                 </p>
 
                 <p class="note">豊富な知識により、調査をスムーズに進行させる。</p>
@@ -1033,7 +1033,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［Ｘ］［Ｘ］［Ｘ］［Ｘ］
                   </div>
 
                   <div class="cell">
@@ -1094,7 +1094,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［知］
+                    <span class="cover">コスト</span>［知］［知］
                   </div>
 
                   <div class="cell">
@@ -1130,7 +1130,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［知］
                   </div>
 
                   <div class="cell">
@@ -1141,8 +1141,8 @@
 
               <div class="area-detail">
                 <p>
-                  クレジットを１点減少させて使用する。<br>
-                  このラウンド中、自身の行うメインアクション判定は、判定ダイスを振らずに達成値が『３』に固定される。
+                  自身が判定に失敗した際に使用できる。<br>
+                  その判定の達成値を『３』に固定する。
                 </p>
 
                 <p class="note">勢いと口先で、強引に納得させる。</p>
@@ -1226,8 +1226,7 @@
 
               <div class="area-detail">
                 <p>
-                  クレジットを１点減少させて使用する。<br>
-                  判定ダイスから１つ選び、その目を±１する（１↔２↔３↔４↔５↔６↔１のように変更する）。
+                  判定ダイスから２つ選び、片方の目を＋１し、もう片方の目を－１する。
                 </p>
 
                 <p class="note">常識や、これまでの思考に囚われない柔軟性。</p>
@@ -1361,7 +1360,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［愛］［愛］
+                    <span class="cover">コスト</span>［愛］
                   </div>
 
                   <div class="cell">
@@ -1441,7 +1440,7 @@
           <div class="contents cards">
 
             <!-- 徹底指導 -->
-            <div class="card ">
+            <div class="card astral">
               <div class="area-head">
                 <div class="title">
                   <span class="ruby">てっていしどう</span>
@@ -1470,30 +1469,30 @@
               <div class="area-detail">
                 <p>
                   対象に、下記のいずれかの効果を与える。<br>
-                  ●【勇気：＋２】【知恵：－２】<br>
-                  ●【知恵：＋２】【愛情：－２】<br>
-                  ●【愛情：＋２】【勇気：－２】
+                  ●【勇気：＋２】【知恵：－１】<br>
+                  ●【知恵：＋２】【愛情：－１】<br>
+                  ●【愛情：＋２】【勇気：－１】
                 </p>
 
                 <p class="note">。</p>
               </div>
             </div>
 
-            <!--  -->
-            <div class="card ">
+            <!-- 予習 -->
+            <div class="card astral">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
+                  <span class="ruby">よしゅう</span>
+                  <span class="main">予習</span>
                 </div>
 
                 <div class="data">
                   <div class="cell">
-                    <span class="cover">フェイズ</span>
+                    <span class="cover">フェイズ</span>共通
                   </div>
 
                   <div class="cell">
-                    <span class="cover">タイミング</span>
+                    <span class="cover">タイミング</span>ラウンド開始
                   </div>
 
                   <div class="cell">
@@ -1501,17 +1500,17 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">対象</span>
+                    <span class="cover">対象</span>‐
                   </div>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-
+                  判定ダイスから１つ選び、その目を±１する。
                 </p>
 
-                <p class="note">。</p>
+                <p class="note">事前学習や下調べに余念が無い。</p>
               </div>
             </div>
 
@@ -1527,75 +1526,76 @@
 
           <div class="contents cards">
 
-            <!--  -->
-            <div class="card ">
+            <!-- 分析力 -->
+            <div class="card astral">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
+                  <span class="ruby">ぶんせきりょく</span>
+                  <span class="main">分析力</span>
                 </div>
 
                 <div class="data">
                   <div class="cell">
-                    <span class="cover">フェイズ</span>
+                    <span class="cover">フェイズ</span>共通
                   </div>
 
                   <div class="cell">
-                    <span class="cover">タイミング</span>
+                    <span class="cover">タイミング</span>サブアクション
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［知］［知］
                   </div>
 
                   <div class="cell">
-                    <span class="cover">対象</span>
+                    <span class="cover">対象</span>※
                   </div>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  。
+                  サブジェクトかエネミーアクション１つを対象にする。<br>
+                  このラウンド中、対象の適正ステータスを〈任意〉に変更する。
                 </p>
 
-                <p class="note">。</p>
+                <p class="note">物事の本質を捉える能力。</p>
               </div>
             </div>
 
-            <!--  -->
-            <div class="card ">
+            <!-- 師表 -->
+            <div class="card astral">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby"></span>
-                  <span class="main"></span>
+                  <span class="ruby">しひょう</span>
+                  <span class="main">師表</span>
                 </div>
 
                 <div class="data">
                   <div class="cell">
-                    <span class="cover">フェイズ</span>
+                    <span class="cover">フェイズ</span>共通
                   </div>
 
                   <div class="cell">
-                    <span class="cover">タイミング</span>
+                    <span class="cover">タイミング</span>ターン終了
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［愛］
                   </div>
 
                   <div class="cell">
-                    <span class="cover">対象</span>
+                    <span class="cover">対象</span>※
                   </div>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-
+                  次のターン中、行動ＰＣが行う判定に＋１する。
                 </p>
 
-                <p class="note">。</p>
+                <p class="note">あなたは常に、他者の手本であろうとする。</p>
               </div>
             </div>
 
@@ -1622,6 +1622,43 @@
           </div>
 
           <div class="contents cards">
+
+            <!-- 遊び盛り -->
+            <div class="card ether">
+              <div class="area-head">
+                <div class="title">
+                  <span class="ruby">あそびざかり</span>
+                  <span class="main">遊び盛り</span>
+                </div>
+
+                <div class="data">
+                  <div class="cell">
+                    <span class="cover">フェイズ</span>カタルシス
+                  </div>
+
+                  <div class="cell">
+                    <span class="cover">タイミング</span>常時
+                  </div>
+
+                  <div class="cell">
+                    <span class="cover">コスト</span>‐
+                  </div>
+
+                  <div class="cell">
+                    <span class="cover">対象</span>自身
+                  </div>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  自身が使用する《交流》の、タイミングを『共通』に変更する。<br>
+                  ただし、カタルシスフェイズ中、あなたが行う《交流》判定に－１する。
+                </p>
+
+                <p class="note">いつでもどこでも気ままに遊ぶ。</p>
+              </div>
+            </div>
 
             <!-- 好印象 -->
             <div class="card astral">
@@ -1652,46 +1689,10 @@
 
               <div class="area-detail">
                 <p>
-                  自身が行うメインアクション判定に＋２する。
+                  自身が行う判定に＋２する。
                 </p>
 
                 <p class="note">自身を強く印象付けることができる。</p>
-              </div>
-            </div>
-
-            <!-- 無垢の笑顔 -->
-            <div class="card astral">
-              <div class="area-head">
-                <div class="title">
-                  <span class="ruby">むくのえがお</span>
-                  <span class="main">無垢の笑顔</span>
-                </div>
-
-                <div class="data">
-                  <div class="cell">
-                    <span class="cover">フェイズ</span>共通
-                  </div>
-
-                  <div class="cell">
-                    <span class="cover">タイミング</span>サブアクション
-                  </div>
-
-                  <div class="cell">
-                    <span class="cover">コスト</span>［愛］
-                  </div>
-
-                  <div class="cell">
-                    <span class="cover">対象</span>他者／１人
-                  </div>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  対象が受けている【ステータス低下】を１つ消滅させる。
-                </p>
-
-                <p class="note">その笑顔を見ただけで、あらゆるストレスが消失する。</p>
               </div>
             </div>
 
@@ -1743,40 +1744,39 @@
               </div>
             </div>
 
-            <!-- 遊び盛り -->
-            <div class="card ether">
+            <!-- 無垢の笑顔 -->
+            <div class="card astral">
               <div class="area-head">
                 <div class="title">
-                  <span class="ruby">あそびざかり</span>
-                  <span class="main">遊び盛り</span>
+                  <span class="ruby">むくのえがお</span>
+                  <span class="main">無垢の笑顔</span>
                 </div>
 
                 <div class="data">
                   <div class="cell">
-                    <span class="cover">フェイズ</span>カタルシス
+                    <span class="cover">フェイズ</span>共通
                   </div>
 
                   <div class="cell">
-                    <span class="cover">タイミング</span>常時
+                    <span class="cover">タイミング</span>サブアクション
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［愛］
                   </div>
 
                   <div class="cell">
-                    <span class="cover">対象</span>自身
+                    <span class="cover">対象</span>他者／１人
                   </div>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  自身が使用する《交流》の、タイミングを『共通』に変更する。<br>
-                  ただし、カタルシスフェイズ中の《交流》判定に－１する。
+                  対象が受けている【ステータス低下】を１つ消滅させる。
                 </p>
 
-                <p class="note">いつでもどこでも気ままに遊ぶ。</p>
+                <p class="note">その笑顔を見ただけで、あらゆるストレスが消失する。</p>
               </div>
             </div>
 
