@@ -16,6 +16,7 @@
   </header>
 
   <main>
+
     <section>
       <div class="contents">
         <div class="inner_contents">
@@ -49,14 +50,14 @@
 
           <div class="process">
             <div class="title">
-              <span class="num">4</span><a href="#arts">アクション</a>
+              <span class="num">4</span><a href="#arts">スキル</a>
             </div>
 
             <div class="detail">
-              <span class="num">4-1</span><a href="#arts-wearpon">攻撃アクションの習得</a><br>
-              <span class="num">4-2</span><a href="#arts-general">基本アクションの自動習得</a><br>
-              <span class="num">4-3</span><a href="#arts-primary">プライマリクラスのアクションの習得</a><br>
-              <span class="num">4-4</span><a href="#arts-free">アクションの自由習得</a>
+              <span class="num">4-1</span><a href="#arts-wearpon">攻撃スキルの習得</a><br>
+              <span class="num">4-2</span><a href="#arts-general">基本スキルの自動習得</a><br>
+              <span class="num">4-3</span><a href="#arts-primary">表層クラスのスキルの習得</a><br>
+              <span class="num">4-4</span><a href="#arts-free">スキルの自由習得</a>
             </div>
           </div>
 
@@ -99,7 +100,7 @@
           <p>
             　<span class="keyword">クラス</span>とは、ＰＣの思想や性質を表すものです。<br>
             　ＰＣは、自らの普段の姿を示す<span class="keyword">表層クラス</span>と、心の内に秘めた感情である<span class="keyword">深層クラス</span>の、２つのクラスを持ちます。<br>
-            　それぞれ、<a href="#status">ステータス</a>の値と、習得できる<a href="#arts">アクション</a>に影響します。詳しい説明は各項目内で行いますので、そちらを見ながら選んでください。
+            　それぞれ、<a href="#status">ステータス</a>の値と、習得できる<a href="#arts">スキル</a>に影響します。詳しい説明は各項目内で行いますので、そちらを見ながら選んでください。
           </p>
 
           <div class="rule_text">
@@ -112,7 +113,7 @@
         <div class="grid-class">
 
           <!-- アジテイター -->
-          <section id="class-kannagi">
+          <section id="class-agi">
             <div class="">
               <h3>アジテイター</h3>
             </div>
@@ -133,8 +134,48 @@
             </div>
           </section>
 
+          <!-- パッショニスタ -->
+          <section id="class-pas">
+            <div class="">
+              <h3>パッショニスタ</h3>
+            </div>
+
+            <div class="contents">
+              <div class="divide-2">
+                <p>
+                  　
+                </p>
+
+                <div class="class_image">
+                  <img src="img/class/test11.png" />
+                  <img src="img/class/test10.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ジーニアス -->
+          <section id="class-jea">
+            <div class="">
+              <h3>ジーニアス</h3>
+            </div>
+
+            <div class="contents">
+              <div class="divide-2">
+                <p>
+                  　
+                </p>
+
+                <div class="class_image">
+                  <img src="img/class/test11.png" />
+                  <img src="img/class/test10.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+
           <!-- トリックスター -->
-          <section id="class-kannagi">
+          <section id="class-tri">
             <div class="">
               <h3>トリックスター</h3>
             </div>
@@ -154,7 +195,7 @@
           </section>
 
           <!-- サーヴァント -->
-          <section id="class-kannagi">
+          <section id="class-sar">
             <div class="">
               <h3>サーヴァント</h3>
             </div>
@@ -173,10 +214,30 @@
             </div>
           </section>
 
-          <!--  -->
-          <section id="class-kannagi">
+          <!-- メンター -->
+          <section id="class-men">
             <div class="">
-              <h3></h3>
+              <h3>メンター</h3>
+            </div>
+
+            <div class="contents">
+              <div class="divide-2">
+                <p>
+                  　
+                </p>
+
+                <div class="class_image">
+                  <img src="img/class/test11.png" />
+                  <img src="img/class/test10.png" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- イノセンス -->
+          <section id="class-ino">
+            <div class="">
+              <h3>イノセンス</h3>
             </div>
 
             <div class="contents">
@@ -283,8 +344,8 @@
                   <td>メンター</td>
                   <td class="">±０</td>
                   <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
                   <td class="bg-green">＋１</td>
+                  <td class="">±０</td>
                 </tr>
 
                 <tr>
@@ -304,110 +365,79 @@
       </div>
     </section>
 
-    <!-- 【４】アクション -->
+    <!-- 【４】スキル -->
     <section id="arts">
       <div class="sticky">
         <h2>
-          <span class="num">4</span>アクション
+          <span class="num">4</span>スキル
         </h2>
       </div>
 
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　ハレビトたちの戦いの技、それが<span class="keyword">アクション</span>です。<a href="./rule_battle.html" target="_blank">カタルシスフェイズ</a>にて、ケガレビトに対抗するための手段となります。<br>
-            　アクションにはあえて厳密なイメージは設定していません。あなたが「このアクションはこういうものなんだ！」と説明できるのなら、それがあなただけのアクションになります。<br>
-            　また、アクションには独自の名称を付けることも可能です。ただし、これはＰＣが技名を叫ぶといった演出上の使い方に限られます。アクションの使用の宣言には、ルールブックに記載されている名称を使ってください。他の人がどういった効果なのか分からないからです。<br>
-            　ある意味で、アクションはＰＣを特徴づけるアクセサリーとも言えるでしょう。自分だけのアクション構成で、キャラクターの個性を際立たせましょう。もちろん、ゲーム的な強さを求めて選択するのも、やり方の一つです。
+            　
           </p>
         </div>
 
-        <!-- 攻撃アクションの習得 -->
-        <section id="arts-wearpon">
-          <div class="sticky">
-            <h3>
-              <span class="num">4-1</span>攻撃アクションの習得
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　<span class="keyword">攻撃アクション</span>は、ハレビトたちがケガレビトとの戦いで用いる武器、あるいは戦闘スタイルそのものを指します。<br>
-              　それは、剣や槍、弓矢や銃などの文字通りの武器だったり、傘や鉄パイプといった身近にある物だったり、炎や雷などの形の無いものだったり、心に訴えかける巧みな話術だったり……、ハレビトの攻撃方法は実に様々です。<br>
-              　攻撃アクションには、【近距離武器】と【遠距離武器】の２つがあります。キャラクターのイメージに合うものを選んで習得してください。なお、ここではどちらか１つしか修得できませんが、<span class="num">4-3</span><a href="#arts-free">アクションの自由習得</a>にてもう片方を習得することも可能です。
-            </p>
-
-            <div class="rule_text">
-              <p>
-                　攻撃アクションを１つ習得します。<br>
-                　ステータスは、習得時に任意のスキルを設定できます。セッション中に変更することはできないので、注意してください。
-              </p>
-
-              <div class="area-button">
-                <a class="link_button" href="./data_arts.html#arts-wearpon" target="_blank">攻撃アクションを確認する</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 基本アクションの自動習得 -->
+        <!-- 基本スキルの自動習得 -->
         <section id="arts-general">
           <div class="sticky">
             <h3>
-              <span class="num">4-2</span>基本アクションの自動習得
+              <span class="num">4-2</span>基本スキルの自動習得
             </h3>
           </div>
 
           <div class="contents">
             <div class="rule_text">
               <p>
-                　【移動】【防御】【略式カウンセリング】【復活】を習得します。
+                　【調査】【交流】【干渉】【拒絶】を習得します。
               </p>
 
               <div class="area-button">
-                <a class="link_button" href="./data_arts.html#auto_addition" target="_blank">基本アクションを確認する</a>
+                <a class="link_button" href="./data_arts.html#auto_addition" target="_blank">基本スキルを確認する</a>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- プライマリクラスのアクションの習得 -->
+        <!-- 表層スキルの習得 -->
         <section id="arts-primary">
           <div class="sticky">
             <h3>
-              <span class="num">4-3</span>プライマリクラスのアクションの習得
+              <span class="num">4-3</span>表層スキルの習得
             </h3>
           </div>
 
           <div class="contents">
             <div class="rule_text">
               <p>
-                　プライマリクラスのアクションを２つ習得します。
+                　表層クラスのスキルを２つ習得します。
               </p>
 
               <div class="area-button">
-                <a class="link_button" href="./data_arts.html#arts-class" target="_blank">クラス専用アクションを確認する</a>
+                <a class="link_button" href="./data_arts.html#arts-class" target="_blank">クラス専用スキルを確認する</a>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- アクションの自由習得 -->
+        <!-- 深層スキルの習得 -->
         <section id="arts-free">
           <div class="sticky">
             <h3>
-              <span class="num">4-4</span>アクションの自由習得
+              <span class="num">4-4</span>深層スキルの習得
             </h3>
           </div>
 
           <div class="contents">
             <div class="rule_text">
               <p>
-                　攻撃アクション、汎用アクション、プライマリクラス・セカンダリクラスのアクションの中から、合計で３つ習得します。
+                　深層クラスのスキルを２つ習得します。
               </p>
 
               <div class="area-button">
-                <a class="link_button" href="./data_arts.html" target="_blank">アクション一覧を確認する</a>
+                <a class="link_button" href="./data_arts.html#arts-class" target="_blank">クラス専用スキルを確認する</a>
               </div>
             </div>
           </div>
@@ -427,22 +457,8 @@
       <div class="contents">
         <div class="inner_contents">
           <p>
-            　セッションとセッションの間、以下のような変更が可能です。
+            　セッションとセッションの間、表層クラスを別のものに変更することが可能です。
           </p>
-
-          <ul>
-            <li>
-              クラスを１つだけ別のものに変更する。これは、セッションの終了後に一度だけ行える（２回セッションを行ったので２つ同時に変更する、といったことはできない）。
-            </li>
-
-            <li>
-              現在修得しているアクションを、別の習得可能なものと入れ替える。
-            </li>
-
-            <li>
-              攻撃アクションの使用ステータスを別のものに変更する。
-            </li>
-          </ul>
         </div>
 
       </div>

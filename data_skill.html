@@ -461,7 +461,7 @@
               </div>
 
               <div class="cell">
-                <span class="cover">コスト</span>クレジット：３
+                <span class="cover">コスト</span>‐
               </div>
 
               <div class="cell">
@@ -472,7 +472,7 @@
 
           <div class="area-detail">
             <p>
-              自身が【印象】を受ける直前に使用できる。<br>
+              自身が【印象】を受ける直前に、クレジット３点を消費して使用できる。<br>
               その【印象】を無効化する。
             </p>
 
@@ -498,7 +498,7 @@
               </div>
 
               <div class="cell">
-                <span class="cover">コスト</span>クレジット：１
+                <span class="cover">コスト</span>‐
               </div>
 
               <div class="cell">
@@ -509,6 +509,7 @@
 
           <div class="area-detail">
             <p>
+              クレジット１点を消費して使用する。<br>
               自身に、【勇気：＋１】【知恵：＋１】【愛情：＋１】【自制：＋１】のいずれか１つの効果を与える。
             </p>
 
@@ -555,18 +556,17 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>‐
+                    <span class="cover">コスト</span>［Ｘ］＝［Ｘ］
                   </div>
 
                   <div class="cell">
-                    <span class="cover">対象</span>自身
+                    <span class="cover">対象</span>他者／１人
                   </div>
                 </div>
               </div>
 
               <div class="area-detail">
                 <p>
-                  自身に【印象：＋１】を与えて使用する。<br>
                   対象に応じた判定を行なう（ＰＣの場合、〈任意〉２）になる。
                 </p>
 
@@ -740,7 +740,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［勇］［知］
+                    <span class="cover">コスト</span>［知］［Ｘ］
                   </div>
 
                   <div class="cell">
@@ -787,7 +787,7 @@
               <div class="area-detail">
                 <p>
                   自身に【自制：－１】を与えて使用する。<br>
-                  このラウンド中、自身の判定に＋２する。
+                  このラウンド中、自身のメインアクション判定に＋２する。
                 </p>
 
                 <p class="note">情熱を秘めた言動。しかし、それを鬱陶しく思う人もいるかもしれない。</p>
@@ -806,8 +806,44 @@
 
           <div class="contents cards">
 
+            <!-- ムードメーカー -->
+            <div class="card ether">
+              <div class="area-head">
+                <div class="title">
+                  <span class="main">ムードメーカー</span>
+                </div>
+
+                <div class="data">
+                  <div class="cell">
+                    <span class="cover">フェイズ</span>カタルシス
+                  </div>
+
+                  <div class="cell">
+                    <span class="cover">タイミング</span>サブアクション
+                  </div>
+
+                  <div class="cell">
+                    <span class="cover">コスト</span>［勇］
+                  </div>
+
+                  <div class="cell">
+                    <span class="cover">対象</span>味方／全員
+                  </div>
+                </div>
+              </div>
+
+              <div class="area-detail">
+                <p>
+                  自身がエリア『４』にいる場合に使用できる。<br>
+                  このラウンド中、対象に【勇気：＋１】を与える。
+                </p>
+
+                <p class="note">歌や踊り、ギャグなどで、自身と仲間のテンションを上げる。</p>
+              </div>
+            </div>
+
             <!-- フレンドシップ -->
-            <div class="card mental">
+            <div class="card astral">
               <div class="area-head">
                 <div class="title">
                   <span class="main">フレンドシップ</span>
@@ -815,7 +851,7 @@
 
                 <div class="data">
                   <div class="cell">
-                    <span class="cover">フェイズ</span>カウンセリング
+                    <span class="cover">フェイズ</span>※
                   </div>
 
                   <div class="cell">
@@ -834,46 +870,11 @@
 
               <div class="area-detail">
                 <p>
-                  自身が行う《交流》判定に＋２する。
+                  カウンセリングフェイズ中、自身の《交流》判定に＋１する。<br>
+                  カタルシスフェイズ中、ＰＣのみを対象とする、自身のメインアクション判定に＋１する。
                 </p>
 
                 <p class="note">あなたは誰とでも仲良くなれる。</p>
-              </div>
-            </div>
-
-            <!-- ムードメーカー -->
-            <div class="card ether">
-              <div class="area-head">
-                <div class="title">
-                  <span class="main">ムードメーカー</span>
-                </div>
-
-                <div class="data">
-                  <div class="cell">
-                    <span class="cover">フェイズ</span>カタルシス
-                  </div>
-
-                  <div class="cell">
-                    <span class="cover">タイミング</span>サブアクション
-                  </div>
-
-                  <div class="cell">
-                    <span class="cover">コスト</span>［勇］［Ｘ］
-                  </div>
-
-                  <div class="cell">
-                    <span class="cover">対象</span>味方／全員
-                  </div>
-                </div>
-              </div>
-
-              <div class="area-detail">
-                <p>
-                  自身がエリア『４』にいる場合に使用できる。<br>
-                  このラウンド中、対象が行う判定に＋１する。
-                </p>
-
-                <p class="note">歌や踊り、ギャグなどで、自身と仲間のテンションを上げる。</p>
               </div>
             </div>
 
@@ -918,7 +919,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［知］
+                    <span class="cover">コスト</span>［知］［知］
                   </div>
 
                   <div class="cell">
@@ -953,7 +954,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［知］［知］
+                    <span class="cover">コスト</span>［知］［Ｘ］［Ｘ］
                   </div>
 
                   <div class="cell">
@@ -1013,7 +1014,7 @@
 
               <div class="area-detail">
                 <p>
-                  自身が行う《調査》判定に＋１する。
+                  自身の《調査》判定に＋１する。
                 </p>
 
                 <p class="note">豊富な知識により、調査をスムーズに進行させる。</p>
@@ -1134,7 +1135,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［知］［知］
+                    <span class="cover">コスト</span>［知］［Ｘ］
                   </div>
 
                   <div class="cell">
@@ -1375,7 +1376,7 @@
 
               <div class="area-detail">
                 <p>
-                  自身が行う、〈愛情〉を使用した判定に成功した際に使用できる。<br>
+                  自身の〈愛情〉判定に成功した際に使用できる。<br>
                   自身は【愛情：＋１】を得る。
                 </p>
 
@@ -1473,9 +1474,9 @@
               <div class="area-detail">
                 <p>
                   対象に、下記のいずれかの効果を与える。<br>
-                  ●【勇気：＋２】【知恵：－１】<br>
-                  ●【知恵：＋２】【愛情：－１】<br>
-                  ●【愛情：＋２】【勇気：－１】
+                  ●【勇気：＋２】【知恵：－２】<br>
+                  ●【知恵：＋２】【愛情：－２】<br>
+                  ●【愛情：＋２】【勇気：－２】
                 </p>
 
                 <p class="note">。</p>
@@ -1584,7 +1585,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［知］［Ｘ］
+                    <span class="cover">コスト</span>［知］
                   </div>
 
                   <div class="cell">
@@ -1595,7 +1596,7 @@
 
               <div class="area-detail">
                 <p>
-                  〈任意〉２の判定を行なう。
+                  〈任意〉３の判定を行なう。
                 </p>
 
                 <p class="judge">
@@ -1659,8 +1660,7 @@
 
               <div class="area-detail">
                 <p>
-                  自身が使用する《交流》の、タイミングを『共通』に変更する。<br>
-                  ただし、カタルシスフェイズ中、あなたが行う《交流》判定に－１する。
+                  自身が習得している《交流》の、タイミングを『共通』に変更する。
                 </p>
 
                 <p class="note">いつでもどこでも気ままに遊ぶ。</p>
@@ -1685,7 +1685,7 @@
                   </div>
 
                   <div class="cell">
-                    <span class="cover">コスト</span>［勇］［愛］
+                    <span class="cover">コスト</span>［Ｘ］→［Ｘ］
                   </div>
 
                   <div class="cell">
@@ -1696,7 +1696,7 @@
 
               <div class="area-detail">
                 <p>
-                  自身が行う判定に＋２する。
+                  自身の判定に＋２する。
                 </p>
 
                 <p class="note">自身を強く印象付けることができる。</p>

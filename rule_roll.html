@@ -22,242 +22,248 @@
       </div>
 
       <div class="contents">
-        <div class="inner_contents">
-          <p>
-            　セッション中、ＰＣは<span class="keyword">判定</span>を求められることがあります。これは、ＰＣの行動が思った通りに成功するか、あるいは失敗するかを判定するものです。
-            <br>
-            　判定は、以下の順番で処理を行います。
-          </p>
+        <p>
+          　セッション中、ＰＣは<span class="keyword">判定</span>を求められることがあります。これは、ＰＣの行動が思った通りに成功するか、あるいは失敗するかを判定するものです。
+          <br>
+          　判定は、以下の順番で処理を行います。
+        </p>
 
-          <p class="list_container">
-            <span class="num">1</span><a href="#roll-1">使用する技能の決定</a><br>
-            <span class="num">2</span><a href="#roll-2">判定ダイスの個数の決定</a><br>
-            <span class="num">3</span><a href="#roll-3">難度の決定</a><br>
-            <span class="num">4</span><a href="#roll-4">成功数の決定</a><br>
-            <span class="num">5</span><a href="#roll-5">成功数と難度の比較</a><br>
-          </p>
-        </div>
+        <p class="list_container">
+          <span class="num">1</span><a href="#roll-1">判定内容の宣言</a><br>
+          <span class="num">2</span><a href="#roll-2">判定ダイスを振る</a><br>
+          <span class="num">3</span><a href="#roll-3">使用ステータスの選択</a><br>
+          <span class="num">4</span><a href="#roll-4">達成値の算出</a><br>
+          <span class="num">5</span><a href="#roll-5">成否決定</a>
+        </p>
 
-        <!-- 使用する技能の決定 -->
+        <!-- 判定内容の宣言 -->
         <section id="roll-1">
           <div class="sticky">
             <h3>
-              <span class="num">1</span>使用する技能の決定
+              <span class="num">1</span>判定内容の宣言
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　ＧＭは、判定で使用する技能（ライフ＋スキル）を決定します。<br>
-              　基本的に、シナリオ上で要求される判定には、どの技能で判定すべきかが記載されているため、それを参照してください。
+              　ＧＭは、その判定における<span class="keyword">適正ステータス</span>と<span class="keyword">目標値</span>を宣言します。<br>
+              　適正ステータスは『使用ステータスの決定・達成値の算出』、目標値は『達成値と目標値の比較』の際に使用されます。<br>
+              　これらは判定対象によって決定します。ルールブックのデータセクションや、シナリオに記載されているものを参照してください。
             </p>
           </div>
         </section>
 
-        <!-- 判定ダイスの個数の決定 -->
+        <!-- 判定ダイスを振る -->
         <section id="roll-2">
           <div class="sticky">
             <h3>
-              <span class="num">2</span>判定ダイスの個数の決定
+              <span class="num">2</span>判定ダイスを振る
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　ＰＣは指定されたライフとスキルのレベルを合計し、<span class="keyword">判定ダイス</span>の個数とします。ダイスは６面のものを使用します。<br>
-              　この際、判定に<span class="keyword">修正</span>が与えられていたならば、ダイス個数がその数値分増減します。プラスとマイナスの両方の修正が与えられている場合は、それらを合計して増減分を求めます。修正の結果、判定ダイスが０個以下になった場合はその時点で<span class="keyword">失敗</span>扱いとなります。以降の手順はスキップしてください。
+              　ＰＣたちは、常に６面ダイスを４つ共有しています。これを<span class="keyword">判定ダイス</span>と呼びます。<br>
+              　判定ＰＣは判定ダイスを振ってください。この際、判定ＰＣの〈自制〉の値と同じ個数のダイスを『振らない』という選択ができます。つまり、『４』～『４－〈自制〉』個のダイスを振るということになります。<br>
+              　振った後、出目の中の、［１］と［２］を〈勇気〉に、［３］と［４］を〈知恵〉に、［５］と［６］を〈愛情〉に対応するダイスとして、それぞれ数えます。
+            </p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <th>出目</th>
+                  <th>対応ステータス</th>
+                </tr>
+
+                <tr>
+                  <td>
+                    ［１］［２］
+                  </td>
+
+                  <td>
+                    〈勇気〉
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    ［３］［４］
+                  </td>
+
+                  <td>
+                    〈知恵〉
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    ［５］［６］
+                  </td>
+
+                  <td>
+                    〈愛情〉
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 達成値の算出 -->
+        <section id="roll-3">
+          <div class="sticky">
+            <h3>
+              <span class="num">3</span>達成値の算出
+            </h3>
+          </div>
+
+          <div class="contents">
+            <p>
+              　判定ＰＣは、〈勇気〉〈知恵〉〈愛情〉から１つ選び、それを<span class="keyword">使用ステータス</span>とします。
             </p>
           </div>
         </section>
 
-        <!-- 難度の決定 -->
-        <section id="roll-3">
+        <!-- 達成値の算出 -->
+        <section id="roll-4">
           <div class="sticky">
             <h3>
-              <span class="num">3</span>難度の決定
+              <span class="num">4</span>達成値の算出
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　ＧＭは、判定の<span class="keyword">難度</span>を決定します。<br>
-              　こちらもシナリオに記載されているため、それを参照してください。<br>
-              　難度を計算によって求める際、結果が０になった場合はその時点で成功扱いとなります。以降の手順はスキップしてください。<br>
-              <br>
-              　シナリオを作成する場合は、以下を参考にしてください。便宜上記載していますが、『５』以上の難度は推奨しません。強い運頼みの要素は、マイナスに働くことが圧倒的に多いためです。
+              　使用ステータスの値と、使用ステータスに対応するダイスの数を合計します。それを<span class="keyword">達成値</span>とします。<br>
+              　使用ステータスと適正ステータスが異なっていると、達成値が１点減少してしまうことに注意してください。<br>
+              　また、使用ステータスに対応するダイスが１つも無かった場合、達成値は『０』に固定されます。
             </p>
 
-            <table class="difficulty">
+            <table>
               <tbody>
                 <tr>
-                  <th rowspan="2">難度</th>
-                  <th colspan="5">判定ダイス個数ごとの成功率（切り捨て）</th>
-                  <th rowspan="2">目安</th>
+                  <th>
+                    判定ＰＣの<br>
+                    ステータス
+                  </th>
+
+                  <th>
+                    適正<br>
+                    ステータス
+                  </th>
+
+                  <th>
+                    判定ダイス
+                  </th>
+
+                  <th>
+                    使用<br>
+                    ステータス
+                  </th>
+
+                  <th>
+                    対応<br>
+                    ダイス数
+                  </th>
+
+                  <th>
+                    適正
+                  </th>
+
+                  <th>
+                    達成値
+                  </th>
                 </tr>
 
                 <tr>
-                  <th>２個</th>
-                  <th>４個</th>
-                  <th>６個</th>
-                  <th>８個</th>
-                  <th>１０個</th>
+                  <td rowspan="3">
+                    〈勇気〉３<br>
+                    〈知恵〉１<br>
+                    〈愛情〉２
+                  </td>
+
+                  <td rowspan="3">
+                    〈勇気〉
+                  </td>
+
+                  <td rowspan="3">
+                    ［１］［２］［４］［４］
+                  </td>
+
+                  <td>
+                    〈勇気〉
+                  </td>
+
+                  <td>
+                    ２
+                  </td>
+
+                  <td>
+                    ±０
+                  </td>
+
+                  <td>
+                    ５
+                  </td>
                 </tr>
 
                 <tr>
-                  <td>１</td>
-                  <td class="t-right">７５％</td>
-                  <td class="t-right">９３％</td>
-                  <td class="t-right">９８％</td>
-                  <td class="t-right">９９％</td>
-                  <td class="t-right">９９％</td>
-                  <td class="t-left">誰にでもできる、ごく簡単な行動。</td>
+                  <td>
+                    〈知恵〉
+                  </td>
+
+                  <td>
+                    ２
+                  </td>
+
+                  <td>
+                    －１
+                  </td>
+
+                  <td>
+                    １
+                  </td>
                 </tr>
 
                 <tr>
-                  <td>２</td>
-                  <td class="t-right">２５％</td>
-                  <td class="t-right">６８％</td>
-                  <td class="t-right">８９％</td>
-                  <td class="t-right">９６％</td>
-                  <td class="t-right">９８％</td>
-                  <td class="t-left">ある程度の知識があれば可能な行動。</td>
-                </tr>
+                  <td>
+                    〈愛情〉
+                  </td>
 
-                <tr>
-                  <td>３</td>
-                  <td class="t-right">０％</td>
-                  <td class="t-right">３１％</td>
-                  <td class="t-right">６５％</td>
-                  <td class="t-right">８５％</td>
-                  <td class="t-right">９４％</td>
-                  <td class="t-left">専門家ならば簡単な行動。</td>
-                </tr>
+                  <td>
+                    ０
+                  </td>
 
-                <tr>
-                  <td>４</td>
-                  <td class="t-right">０％</td>
-                  <td class="t-right">６％</td>
-                  <td class="t-right">３４％</td>
-                  <td class="t-right">６３％</td>
-                  <td class="t-right">８２％</td>
-                  <td class="t-left">専門家でもたまに失敗する行動。</td>
-                </tr>
+                  <td>
+                    －１
+                  </td>
 
-                <tr>
-                  <td>５</td>
-                  <td class="t-right">０％</td>
-                  <td class="t-right">０％</td>
-                  <td class="t-right">１０％</td>
-                  <td class="t-right">３６％</td>
-                  <td class="t-right">６２％</td>
-                  <td class="t-left">専門家でも困難な行動。<span class="t-red">※非推奨</span></td>
-                </tr>
-
-                <tr>
-                  <td>６</td>
-                  <td class="t-right">０％</td>
-                  <td class="t-right">０％</td>
-                  <td class="t-right">１％</td>
-                  <td class="t-right">１４％</td>
-                  <td class="t-right">３７％</td>
-                  <td class="t-left">運に任せた不確実な行動。<span class="t-red">※非推奨</span></td>
+                  <td>
+                    ０
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <!-- 成功数の決定 -->
-        <section id="roll-4">
-          <div class="sticky">
-            <h3>
-              <span class="num">4</span>成功数の決定
-            </h3>
-          </div>
-
-          <div class="contents">
-            <p>
-              　ハレビトは、判定ダイスを振ります。そして、その中から『４』『５』『６』の出目を数え、<span class="keyword">成功数</span>とします。<br>
-              　また、『６』の出目を数え、それと同じだけの<a href="#blessing">カゴ</a>を獲得します。
-            </p>
-          </div>
-        </section>
-
-        <!-- 成功数と難度の比較 -->
+        <!-- 成否決定 -->
         <section id="roll-5">
           <div class="sticky">
             <h3>
-              <span class="num">5</span>成功数と難度の比較
+              <span class="num">5</span>成否決定
             </h3>
           </div>
 
           <div class="contents">
             <p>
-              　成功数が難度以上の場合、<span class="keyword">成功</span>とします。そうでなければ、<span class="keyword">失敗</span>とします。
+              　達成値が目標値以上の場合、<span class="keyword">成功</span>とします。そうでなければ、<span class="keyword">失敗</span>とします。<br>
+              　ＧＭは、それらに応じた処理を行ってください。
             </p>
           </div>
         </section>
-      </div>
-    </section>
 
-    <!-- 振り直し -->
-    <section>
-      <div class="sticky">
-        <h2>
-          振り直し
-        </h2>
-      </div>
-
-      <div class="contents">
-        <p>
-          　判定に失敗した場合や、成功数に不満がある場合、<span class="keyword">振り直し</span>をすることができます。<br>
-          　判定の使用技能に対応したライフに１点のダメージを与え、その判定ダイスを全て振り直すことができます。修正が与えられていた場合、それは引き継がれます。<br>
-          　振り直しは、ライフがある限り、何回でも行うことができます。
-        </p>
-      </div>
-    </section>
-
-    <!-- カゴ -->
-    <section id="blessing">
-      <div class="sticky">
-        <h2>
-          カゴ
-        </h2>
-      </div>
-
-      <div class="contents">
-        <p>
-          　<span class="keyword">カゴ</span>はＰＣごとに持つ能力ではなく、セッション中にＰＣ全体で共有するポイントです。<br>
-          　セッション開始時は０点になっており、最大で１０点まで貯めることができます。<a href="./rule_investigate.html#roll_kizuna" target="_blank">キズナ判定</a>や、判定ダイスで『６』の出目が出た際に獲得します。<br>
-          <br>
-          　１点消費するごとに、下記のいずれかの効果を得られます。
-        </p>
-
-        <table>
-          <tbody>
-            <tr>
-              <th>効果名</th>
-
-              <th>説明</th>
-            </tr>
-
-            <tr>
-              <td>判定サポート</td>
-
-              <td class="t-left">
-                判定に１のプラス修正を与える。１回の判定につき、３回まで使用できる。
-              </td>
-            </tr>
-
-            <tr>
-              <td>ダメージ軽減</td>
-
-              <td class="t-left">
-                ライフへのダメージを１点減少させる。１回のダメージにつき、何回でも使用できる。この効果は、自身が行うアクションによるダメージにも使用できる。
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
