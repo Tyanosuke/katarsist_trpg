@@ -1,11 +1,4 @@
 /**
- * フェードイン
- */
-// window.onload = function () {
-//   document.body.classList.add("show");
-// };
-
-/**
 * ハッシュ変更イベント
 */
 function jumpEvent(hash) {
@@ -32,21 +25,6 @@ function jumpEvent(hash) {
       });
     }
   }
-
-  // // 通常の遷移処理を中断
-  // e.preventDefault();
-  //
-  // // フェードアウト
-  // document.body.classList.remove("show");
-  //
-  // // リンク先ＵＲＬを取得
-  // const href = link.getAttribute('href');
-  //
-  // // フェードアウト完了まで遅延させる
-  // setTimeout(() => {
-  //   // 遷移処理
-  //   window.location.href = href;
-  // }, 200);
 }
 
 /**

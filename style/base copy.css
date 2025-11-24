@@ -1,0 +1,809 @@
+/* -------------------------------------------------- */
+/* フォント */
+/* -------------------------------------------------- */
+
+/* 基本 */
+@font-face {
+  font-family: "my_font";
+  src: url(../font/BIZUDPMincho-Regular.ttf);
+}
+
+/* 等幅数字 */
+@font-face {
+  font-family: "num_font";
+  src: url(../font/GenShinGothic-Medium.ttf);
+}
+
+/* -------------------------------------------------- */
+/* 定数 */
+/* -------------------------------------------------- */
+
+:root {
+  /* 最大幅 */
+  --max-width: 1000px;
+
+  /* ヘッダー：高さ */
+  --header-height: 60px;
+
+  /* スティッキーロウ：高さ */
+  --sticky-row-height: 60px;
+
+  /* メインカラー */
+  --color-main: rgba(64, 64, 64, 100%);
+
+  /* メインカラー（透過） */
+  --color-main-alpha: rgba(64, 64, 64, 25%);
+
+  /* サブカラー */
+  --color-sub: rgba(128, 128, 128, 100%);
+
+  /* サブカラー（透過） */
+  --color-sub-alpha: rgb(230, 230, 230);
+
+  /* 選択 */
+  --color-select: rgba(128, 128, 128, 100%);
+
+  /* 背景色 */
+  --color-bg: #fff;
+}
+
+/* -------------------------------------------------- */
+/* 基本 */
+/* -------------------------------------------------- */
+
+/* ボディ */
+body {
+  background: var(--color-bg);
+  margin: var(--header-height) 0 0 0;
+  padding: 8px;
+  padding-top: 1em;
+  font-family: my_font;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 1;
+  /* opacity: 0; */
+  /* transition: opacity 0.2s ease; */
+}
+
+/* ボディ：表示 */
+/* body.show {
+  opacity: 1;
+} */
+
+/* メイン */
+main {
+  width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* セクション */
+section {
+  margin-bottom: 3em;
+}
+
+/* セクション内セクション */
+section section {
+  margin-bottom: 2em;
+}
+
+/* 段落 */
+p {
+  margin: 0 0 1em 0;
+}
+
+/* 段落の次 */
+p+* {
+  margin-top: 1em;
+}
+
+/* 箇条書きリスト */
+ul {
+  margin: 0;
+}
+
+/* -------------------------------------------------- */
+/* 【汎用】テキスト */
+/* -------------------------------------------------- */
+
+/* 文字サイズ：小 */
+.t-small {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+/* 等幅数字 */
+.num-fixed {
+  font-family: num_font;
+}
+
+/* 文字色：赤 */
+.t-red {
+  color: #c00 !important;
+}
+
+/* 文字色：メイン */
+.t-color-main {
+  color: var(--color-main) !important;
+}
+
+/* 文字色：サブ */
+.t-color-sub {
+  color: var(--color-sub) !important;
+}
+
+/* 太字 */
+.t-bold {
+  font-weight: bold !important;
+}
+
+/* 左寄せ */
+.t-left {
+  text-align: left !important;
+}
+
+/* 中央寄せ */
+.t-center {
+  text-align: center !important;
+}
+
+/* 右寄せ */
+.t-right {
+  text-align: right !important;
+}
+
+/* 傍点 */
+.t-sidepoint {
+  text-emphasis: sesame;
+}
+
+/* セリフ */
+.t-lines {
+  margin-top: 1em !important;
+  font-weight: bold;
+  transform: skewX(-20deg);
+}
+
+/* -------------------------------------------------- */
+/* ヘッダー */
+/* -------------------------------------------------- */
+
+/* 基本 */
+header {
+  height: var(--header-height);
+  background: var(--color-main);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------- */
+/* 見出し */
+/* -------------------------------------------------- */
+
+/* 見出し１ */
+h1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+  color: #fff;
+}
+
+/* 見出し１＞セクション名 */
+.section_name {
+  background: var(--color-bg);
+  width: fit-content;
+  height: fit-content;
+  margin-right: 16px;
+  padding: 0 16px;
+  color: var(--color-main);
+  font-size: 0.5em;
+}
+
+/* 見出し２ */
+h2 {
+  background: var(--color-main);
+  border-radius: 0 8px 0 8px;
+  padding: 12px;
+  color: #fff;
+}
+
+/* 見出し３ */
+h3 {
+  border-bottom: solid 3px var(--color-main);
+  border-left: solid 15px var(--color-main);
+  margin-top: 12px;
+  padding-left: 12px;
+  color: var(--color-main);
+}
+
+/* 見出し４ */
+h4 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 4px;
+  border-bottom: solid 2px var(--color-main);
+}
+
+/* 見出し４＋段落 */
+h4+p,
+h4+p+p {
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+
+/* 見出し４＋コンテンツ＞段落 */
+h4+.contents>p {
+  margin-top: 0;
+}
+
+/* 見出し＞文字サイズ：小 */
+h2>.t-small,
+h3>.t-small {
+  margin-left: 1em;
+  font-size: 0.75em;
+  font-weight: normal;
+}
+
+/* -------------------------------------------------- */
+/* コンテンツ */
+/* -------------------------------------------------- */
+
+/* 基本 */
+.contents {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+/* 段落 */
+.contents>p {
+  margin-top: 0;
+}
+
+/* インナーコンテンツ */
+.contents>.inner_contents {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* -------------------------------------------------- */
+/* レイアウト */
+/* -------------------------------------------------- */
+
+/* フレックス */
+.d-flex {
+  display: flex;
+}
+
+/* コンテンツ＆フレックス */
+.d-flex.gap {
+  gap: 72px;
+  margin: 0;
+}
+
+/* 段落＆フレックス */
+p.d-flex {
+  padding-left: 1em;
+}
+
+/* フレックス：間隔 */
+.d-flex+.d-flex {
+  margin-top: 0.5em;
+}
+
+/* フレックス＞見出し */
+.d-flex>.title {
+  border: solid 2px var(--color-main);
+  height: fit-content;
+  margin-right: 8px;
+  padding: 2px 4px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+/* フレックス＞段落 */
+.d-flex>p {
+  flex: 1;
+  margin: 0;
+}
+
+/* フレックス＞コンテンツ */
+.d-flex>.contents {
+  flex: 1;
+  padding: 0;
+}
+
+/* フレックス＞コンテンツ＞最後の要素 */
+.d-flex>.contents>*:last-child {
+  margin-bottom: 0;
+}
+
+/* 非表示 */
+.hidden {
+  display: none;
+}
+
+/* -------------------------------------------------- */
+/* リスト */
+/* -------------------------------------------------- */
+
+/* 基本 */
+span.list_item {
+  margin-left: -2em;
+  text-indent: 2em;
+}
+
+/* 戦闘要素 */
+span.list_item::before {
+  content: "";
+  display: inline-block;
+  background: currentColor;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  margin-right: 4px;
+}
+
+/* -------------------------------------------------- */
+/* アコーディオン */
+/* -------------------------------------------------- */
+
+/* コンテンツ */
+.acordion>.contents {
+  max-height: 10000px;
+  opacity: 1;
+  overflow: hidden;
+  /* transition: max-height 0.25s ease, opacity 0.25s ease; */
+}
+
+/* 見出し：閉じる */
+.acordion.close {
+  margin-bottom: 1em;
+}
+
+/* 見出し：閉じる＞コンテンツ */
+.acordion.close>.contents {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* 「閉じる」「開く」ボタン */
+.acordion button.button-acordion {
+  width: 100px;
+  background: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  position: absolute;
+  right: 8px;
+  color: var(--color-main);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 「閉じる」「開く」ボタン：末尾要素 */
+.acordion button.button-acordion::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-right: solid 3px currentColor;
+  border-bottom: solid 3px currentColor;
+  transform: translate(0, -50%) rotate(225deg);
+  /* transition: transform 0.25s ease; */
+}
+
+/* 「閉じる」「開く」ボタン：末尾要素 */
+.acordion.close button.button-acordion::after {
+  transform: translate(0, -50%) rotate(45deg);
+}
+
+/* 「閉じる」ボタン */
+.acordion:not(.close) button.button-acordion>span:nth-child(2) {
+  display: none;
+}
+
+/* 「開く」ボタン */
+.acordion.close button.button-acordion>span:nth-child(1) {
+  display: none;
+}
+
+/* -------------------------------------------------- */
+/* タグジャンプ */
+/* -------------------------------------------------- */
+
+/* ヘッダー分マージン */
+section {
+  margin-top: calc((var(--header-height)) * -1);
+  padding-top: calc(var(--header-height));
+}
+
+/* ヘッダー分マージン */
+section section {
+  margin-top: calc((var(--sticky-row-height) + var(--header-height) + 1em) * -1);
+  padding-top: calc(var(--sticky-row-height) + var(--header-height) + 1em);
+}
+
+/* ヘッダー分マージン */
+section section section {
+  margin-top: calc((var(--sticky-row-height) * 2 + var(--header-height) + 1em) * -1);
+  padding-top: calc(var(--sticky-row-height) * 2 + var(--header-height) + 1em);
+}
+
+/* 強調表示 */
+.flash>h2,
+.flash>.sticky>h2 {
+  animation: flashSmooth1 1s ease-in-out 4 alternate;
+}
+
+/* 強調表示：アニメーション */
+@keyframes flashSmooth1 {
+
+  0%,
+  100% {
+    background-color: var(--color-main);
+  }
+
+  50% {
+    background-color: #880;
+  }
+
+}
+
+/* 強調表示 */
+.flash>h3,
+.flash>.sticky>h3,
+.flash>h4,
+.flash>.sticky>h4 {
+  animation: flashSmooth2 1s ease-in-out 4 alternate;
+}
+
+/* 強調表示：アニメーション */
+@keyframes flashSmooth2 {
+
+  0%,
+  100% {
+    background: #fff;
+  }
+
+  50% {
+    background: #ff8;
+  }
+
+}
+
+/* -------------------------------------------------- */
+/* 文章 */
+/* -------------------------------------------------- */
+
+/* マーカー */
+.keyword {
+  padding: 0 4px;
+  font-weight: bold;
+  background: linear-gradient(transparent 40%, rgba(255, 255, 0, 30%) 40%);
+  word-break: keep-all;
+}
+
+/* ルール */
+.rule_text {
+  position: relative;
+  background: rgba(255, 255, 0, 15%);
+  margin: 1em 0;
+  padding: 12px;
+}
+
+/* ルール＞段落 */
+.rule_text>p {
+  margin: 0;
+}
+
+/* ルール＞ボタンエリア */
+.rule_text>.area-button {
+  margin-top: 1em;
+  text-align: right;
+}
+
+/* 分岐タイトル */
+.branch_title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+/* 分岐タイトル：戦闘 */
+.branch_title::before {
+  content: "▼";
+  margin-right: 2px;
+  color: var(--color-main);
+}
+
+/* -------------------------------------------------- */
+/* リンクボタン */
+/* -------------------------------------------------- */
+
+/* リンク */
+a {
+  display: inline-block;
+  background: var(--color-sub-alpha);
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 0 4px;
+  cursor: pointer;
+  color: currentColor;
+  text-decoration: none;
+  /* transition: background-color 0.25s ease, color 0.25s ease; */
+}
+
+/* リンク：ホバー */
+a:hover {
+  background-color: var(--color-select);
+  color: #fff;
+}
+
+/* 別タブリンク */
+a[target="_blank"] {
+  position: relative;
+  padding-right: 24px;
+}
+
+/* 別タブリンク：末尾要素 */
+a[target="_blank"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-right: solid 2px currentColor;
+  border-bottom: solid 2px currentColor;
+  transform: translate(0, -50%) rotate(-45deg);
+}
+
+/* リンクボタン */
+a.link_button {
+  position: relative;
+  background: #fff;
+  border: solid 3px var(--color-main);
+  border-radius: 100px;
+  padding: 4px 24px;
+  padding-right: 36px;
+  color: var(--color-main);
+}
+
+/* リンクボタン：末尾要素 */
+a.link_button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-right: solid 3px currentColor;
+  border-bottom: solid 3px currentColor;
+  transform: translate(0, -50%) rotate(-45deg);
+}
+
+/* リンクボタン：ホバー */
+a.link_button:hover {
+  background: var(--color-main);
+  color: #fff;
+}
+
+/* -------------------------------------------------- */
+/* 戻るボタン */
+/* -------------------------------------------------- */
+
+/* 基本 */
+.button-prev {
+  border-radius: 0 0 8px 8px;
+  min-width: 100px;
+  padding: 8px;
+  position: fixed;
+  top: 0;
+  right: 24px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* テーブル */
+/* -------------------------------------------------- */
+
+/* テーブル */
+table {
+  background: var(--color-sub-alpha);
+  border-radius: 8px;
+  border-spacing: 4px;
+  width: 100%;
+  margin: 1em 0;
+  padding: 8px;
+}
+
+/* セル */
+table>tbody>tr>* {
+  background: #fff;
+  padding: 8px;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* セル：緑 */
+table>tbody>tr>*.bg-green {
+  background: #efe;
+}
+
+/* ヘッダーセル */
+table>tbody>tr>th {
+  background: var(--color-sub);
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+/* -------------------------------------------------- */
+/* スティッキーロウ */
+/* -------------------------------------------------- */
+
+/* スティッキーロウ：１段目 */
+.sticky {
+  display: flex;
+  background: var(--color-bg);
+  width: 100%;
+  height: var(--sticky-row-height);
+  padding-top: 1em;
+  box-sizing: border-box;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 2;
+}
+
+/* スティッキーロウ＞要素 */
+.sticky>* {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* スティッキーロウ：２段目 */
+.contents .sticky {
+  height: var(--sticky-row-height);
+  padding: 0;
+  padding-top: 16px;
+  top: calc(var(--header-height) + var(--sticky-row-height));
+  z-index: 1;
+}
+
+/* -------------------------------------------------- */
+/* 番号 */
+/* -------------------------------------------------- */
+
+/* 通常 */
+.num {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1em;
+  margin-right: 8px;
+  padding: 6px;
+  padding-left: 8px;
+  background: var(--color-main);
+  border-radius: 8px;
+  color: #fff;
+  font-family: num_font;
+  font-size: 0.75em;
+  font-weight: bold !important;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+/* h2内 */
+h2 .num {
+  background: #fff;
+  color: var(--color-main);
+}
+
+/* 段落内 */
+p>.num {
+  margin: 0 4px;
+  padding: 4px 6px;
+}
+
+/* -------------------------------------------------- */
+/* 処理順 */
+/* -------------------------------------------------- */
+
+/* コンテナ */
+.list_container {
+  border: solid 3px var(--color-sub);
+  margin-bottom: 2em;
+  padding: 12px;
+}
+
+/* コンテナ内コンテナ */
+.list_container .list_container {
+  border: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1.5em;
+}
+
+/* 処理順 */
+.list_container>.process {
+  padding: 1em 0;
+}
+
+/* 処理順：最初の要素 */
+.list_container>.process:first-child {
+  padding-top: 0;
+}
+
+/* 処理順：最後の要素 */
+.list_container>.process:last-child {
+  padding-bottom: 0;
+}
+
+/* 処理順：洞察 */
+.process+.process {
+  border-top: solid 3px var(--color-sub-alpha);
+}
+
+/* 処理順＞内容 */
+.process>.detail {
+  margin-top: 0.5em;
+  padding-left: 1.5em;
+}
+
+/* 番号 */
+.process span.num,
+.list_container span.num {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* ２段落目リスト */
+.process>.list_container {
+  margin-top: 1em;
+}
+
+/* -------------------------------------------------- */
+/* 技能テーブル */
+/* -------------------------------------------------- */
+
+/* セル：《心》 */
+table td.astral {
+  background: #efffef;
+}
+
+/* ヘッダーセル：《心》 */
+table th.astral {
+  color: #efffef;
+}
+
+/* セル：《技》 */
+table td.mental {
+  background: #efefff;
+}
+
+/* ヘッダーセル：《技》 */
+table th.mental {
+  color: #efefff;
+}
+
+/* セル：《体》 */
+table td.ether {
+  background: #ffefef;
+}
+
+/* ヘッダーセル：《体》 */
+table th.ether {
+  color: #ffefef;
+}

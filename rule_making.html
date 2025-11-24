@@ -7,8 +7,11 @@
 
 <body>
   <header>
+    <div class="section_name">
+      ルールセクション
+    </div>
+
     <h1>
-      <span class="section_name">ルールセクション</span>
       ＰＣ作成
     </h1>
 
@@ -16,87 +19,104 @@
   </header>
 
   <main>
+    <div class="detail">
 
-    <section>
-      <div class="contents">
-        <div class="inner_contents">
+      <!-- -------------------------------------------------- -->
+      <!-- ＰＣ作成手順 -->
+      <!-- -------------------------------------------------- -->
+
+      <section>
+
+        <div class="sticky">
+          <h2>
+            ＰＣ作成手順
+          </h2>
+        </div>
+
+        <div class="contents">
+          <div class="list_container">
+
+            <div class="process">
+              <div class="title">
+                <span class="num">1</span><a href="#personality">パーソナリティ</a>
+              </div>
+            </div>
+
+            <div class="process">
+              <div class="title">
+                <span class="num">2</span><a href="#class">クラス</a>
+              </div>
+            </div>
+
+            <div class="process">
+              <div class="title">
+                <span class="num">3</span><a href="#status">ステータス</a>
+              </div>
+
+              <div class="detail">
+                <span class="num">3-1</span><a href="#status-life">ステータスの設定</a>
+              </div>
+            </div>
+
+            <div class="process">
+              <div class="title">
+                <span class="num">4</span><a href="#arts">スキル</a>
+              </div>
+
+              <div class="detail">
+                <span class="num">4-1</span><a href="#arts-wearpon">攻撃スキルの習得</a><br>
+                <span class="num">4-2</span><a href="#arts-general">基本スキルの自動習得</a><br>
+                <span class="num">4-3</span><a href="#arts-primary">表層クラスのスキルの習得</a><br>
+                <span class="num">4-4</span><a href="#arts-secondary">深層クラスのスキルの習得</a>
+              </div>
+            </div>
+
+
+            <div class="process">
+              <div class="title">
+                <span class="num">EX</span><a href="#rebuild">リビルド</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------------- -->
+      <!-- 【１】パーソナリティ -->
+      <!-- -------------------------------------------------- -->
+
+      <section id="personality">
+
+        <div class="sticky">
+          <h2>
+            <span class="num">1</span>パーソナリティ
+          </h2>
+        </div>
+
+        <div class="contents">
           <p>
-            　ＰＣの作成手順について解説します。
+            　まずは、ＰＣの名前や、性別、年齢などを決めます。<br>
+            　ＰＣは、魔法や超能力のようなものが使えるわけではありません。それ以外に設定の制限は無いので、自由に考えてください。
           </p>
         </div>
 
-        <div class="list_container">
-          <div class="process">
-            <div class="title">
-              <span class="num">1</span><a href="#personality">パーソナリティ</a>
-            </div>
-          </div>
+      </section>
 
-          <div class="process">
-            <div class="title">
-              <span class="num">2</span><a href="#class">クラス</a>
-            </div>
-          </div>
+      <!-- -------------------------------------------------- -->
+      <!-- 【２】クラス -->
+      <!-- -------------------------------------------------- -->
 
-          <div class="process">
-            <div class="title">
-              <span class="num">3</span><a href="#status">ステータス</a>
-            </div>
+      <section id="class">
 
-            <div class="detail">
-              <span class="num">3-1</span><a href="#status-life">ステータスの設定</a>
-            </div>
-          </div>
-
-          <div class="process">
-            <div class="title">
-              <span class="num">4</span><a href="#arts">スキル</a>
-            </div>
-
-            <div class="detail">
-              <span class="num">4-1</span><a href="#arts-wearpon">攻撃スキルの習得</a><br>
-              <span class="num">4-2</span><a href="#arts-general">基本スキルの自動習得</a><br>
-              <span class="num">4-3</span><a href="#arts-primary">表層クラスのスキルの習得</a><br>
-              <span class="num">4-4</span><a href="#arts-free">スキルの自由習得</a>
-            </div>
-          </div>
-
-
-          <div class="process">
-            <div class="title">
-              <span class="num">EX</span><a href="#rebuild">リビルド</a>
-            </div>
-          </div>
+        <div class="sticky">
+          <h2>
+            <span class="num">2</span>クラス
+          </h2>
         </div>
-      </div>
-    </section>
 
-    <!-- 【１】パーソナリティ -->
-    <section id="personality">
-      <div class="sticky">
-        <h2>
-          <span class="num">1</span>パーソナリティ
-        </h2>
-      </div>
+        <div class="contents">
 
-      <div class="contents">
-        <p>
-          　まずは、ＰＣの名前や、性別、年齢などを決めます。<br>
-          　“ハレの力を使える”以外に設定の制限は無いので、自由に考えてください。
-        </p>
-      </div>
-    </section>
-
-    <!-- 【２】クラス -->
-    <section id="class">
-      <div class="sticky">
-        <h2>
-          <span class="num">2</span>クラス
-        </h2>
-      </div>
-
-      <div class="contents">
-        <div class="inner_contents">
           <p>
             　<span class="keyword">クラス</span>とは、ＰＣの思想や性質を表すものです。<br>
             　ＰＣは、自らの普段の姿を示す<span class="keyword">表層クラス</span>と、心の内に秘めた感情である<span class="keyword">深層クラス</span>の、２つのクラスを持ちます。<br>
@@ -108,373 +128,388 @@
               　下記のクラスの中から、表層クラスと深層クラスを１つずつ選択します。両方とも同じものを選択しても構いません。
             </p>
           </div>
-        </div>
 
-        <div class="grid-class">
+          <div class="grid-class">
 
-          <!-- アジテイター -->
-          <section id="class-agi">
-            <div class="">
+            <!-- アジテイター -->
+            <section id="class-agi">
+
               <h3>アジテイター</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　人の目と心を惹きつける者のクラスです。<br>
-                  　〈勇気〉と〈自制〉に優れています。<br>
-                  　強い【印象】を与えたり、自身や味方を強化するスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test4.png" />
-                  <img src="img/class/test3.png" />
+                  <p>
+                    　人の目と心を惹きつける者のクラスです。<br>
+                    　〈勇気〉と〈自制〉に優れています。<br>
+                    　強い【印象】を与えたり、自身や味方を強化するスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test1.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- パッショニスタ -->
-          <section id="class-pas">
-            <div class="">
+            </section>
+
+            <!-- パッショニスタ -->
+            <section id="class-pas">
+
               <h3>パッショニスタ</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　胸に秘めきれない情熱を持つ者のクラスです。<br>
-                  　〈勇気〉と〈愛情〉に優れています。<br>
-                  　デメリットや使用条件を持つものの、強力な効果を持つスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test11.png" />
-                  <img src="img/class/test10.png" />
+                  <p>
+                    　胸に秘めきれない情熱を持つ者のクラスです。<br>
+                    　〈勇気〉と〈愛情〉に優れています。<br>
+                    　デメリットや使用条件を持つものの、強力な効果を持つスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test5.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- ジーニアス -->
-          <section id="class-jea">
-            <div class="">
+            </section>
+
+            <!-- ジーニアス -->
+            <section id="class-jea">
+
               <h3>ジーニアス</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　豊富な知識を持つ者のクラスです。<br>
-                  　〈知恵〉と〈自制〉に優れています。<br>
-                  　自身に有利な効果を持つスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test11.png" />
-                  <img src="img/class/test10.png" />
+                  <p>
+                    　豊富な知識を持つ者のクラスです。<br>
+                    　〈知恵〉と〈自制〉に優れています。<br>
+                    　自身に有利な効果を持つスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test10.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- トリックスター -->
-          <section id="class-tri">
-            <div class="">
+            </section>
+
+            <!-- トリックスター -->
+            <section id="class-tri">
+
               <h3>トリックスター</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　知恵に優れる者のクラスです。<br>
-                  　〈勇気〉と〈知恵〉に優れています。<br>
-                  　メリットとデメリットを併せ持つスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test5.png" />
-                  <img src="img/class/test1.png" />
+                  <p>
+                    　知恵に優れる者のクラスです。<br>
+                    　〈勇気〉と〈知恵〉に優れています。<br>
+                    　メリットとデメリットを併せ持つスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test4.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- サーヴァント -->
-          <section id="class-sar">
-            <div class="">
+            </section>
+
+            <!-- サーヴァント -->
+            <section id="class-sar">
+
               <h3>サーヴァント</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　他者を気遣う者のクラスです。
-                  　〈愛情〉と〈自制〉に優れています。<br>
-                  　エリア移動に関するスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test9.png" />
-                  <img src="img/class/test8.png" />
+                  <p>
+                    　他者を気遣う者のクラスです。<br>
+                    　〈愛情〉と〈自制〉に優れています。<br>
+                    　エリア移動に関するスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test8.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- メンター -->
-          <section id="class-men">
-            <div class="">
+            </section>
+
+            <!-- メンター -->
+            <section id="class-men">
+
               <h3>メンター</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　成長を促す者のクラスです。<br>
-                  　〈知恵〉と〈愛情〉に優れています。<br>
-                  　味方を強化したり、複数人に【印象】を与えるスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test11.png" />
-                  <img src="img/class/test10.png" />
+                  <p>
+                    　成長を促す者のクラスです。<br>
+                    　〈知恵〉と〈愛情〉に優れています。<br>
+                    　味方を強化したり、複数人に【印象】を与えるスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test3.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
 
-          <!-- イノセンス -->
-          <section id="class-ino">
-            <div class="">
+            </section>
+
+            <!-- イノセンス -->
+            <section id="class-ino">
+
               <h3>イノセンス</h3>
-            </div>
 
-            <div class="contents">
-              <div class="divide-2">
-                <p>
-                  　無垢なる魅力を持つ者のクラスです。<br>
-                  　ステータスは一切上昇しませんが、その分強力なスキルが使えます。
-                </p>
+              <div class="contents">
+                <div class="divide-2">
 
-                <div class="class_image">
-                  <img src="img/class/test11.png" />
-                  <img src="img/class/test10.png" />
+                  <p>
+                    　無垢なる魅力を持つ者のクラスです。<br>
+                    　ステータスは一切上昇しませんが、その分強力なスキルが使えます。
+                  </p>
+
+                  <div class="class_image">
+                    <img src="img/class/test11.png" />
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </section>
+
+            </section>
+
+          </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- ステータス -->
-    <section id="status">
-      <div class="sticky">
-        <h2>
-          <span class="num">3</span>ステータス
-        </h2>
-      </div>
+      </section>
 
-      <div class="contents">
-        <div class="inner_contents">
+      <!-- -------------------------------------------------- -->
+      <!-- 【３】ステータス -->
+      <!-- -------------------------------------------------- -->
+
+      <section id="status">
+
+        <div class="sticky">
+          <h2>
+            <span class="num">3</span>ステータス
+          </h2>
+        </div>
+
+        <div class="contents">
+
           <p>
             　<span class="keyword">ステータス</span>には〈勇気〉〈知恵〉〈愛情〉〈自制〉の４つがあります。それぞれにはレベルがあり、「〈博愛〉２」のように表記されます。<br>
             　〈勇気〉〈知恵〉〈愛情〉は、<a href="./rule_roll.html" target="_blank">判定</a>での達成値算出に使用します。〈自制〉は、判定時にキープできるダイスの数となります。
           </p>
+
+          <!-- クラスごとのステータス -->
+          <section>
+            <div class="sticky">
+              <h3>
+                クラスごとのステータス
+              </h3>
+            </div>
+
+            <div class="contents">
+              <div class="inner_contents">
+                <p>
+                  　ステータスは、表層クラスと深層クラスの両方の値を合算して求めます。<br>
+                  　各ステータスの初期値は１なので、それに以下の値を足してください。
+                </p>
+              </div>
+
+              <table class="table-evenly">
+                <tbody>
+                  <tr>
+                    <th>クラス</th>
+                    <th class="">〈勇気〉</th>
+                    <th class="">〈知恵〉</th>
+                    <th class="">〈愛情〉</th>
+                    <th class="">〈自制〉</th>
+                  </tr>
+
+                  <tr>
+                    <td>アジテイター</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="">±０</td>
+                    <td class="">±０</td>
+                    <td class="bg-green">＋１</td>
+                  </tr>
+
+                  <tr>
+                    <td>パッショニスタ</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="">±０</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="">±０</td>
+                  </tr>
+
+                  <tr>
+                    <td>ジーニアス</td>
+                    <td class="">±０</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="">±０</td>
+                    <td class="bg-green">＋１</td>
+                  </tr>
+
+                  <tr>
+                    <td>トリックスター</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="">±０</td>
+                    <td class="">±０</td>
+                  </tr>
+
+                  <tr>
+                    <td>サーヴァント</td>
+                    <td class="">±０</td>
+                    <td class="">±０</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="bg-green">＋１</td>
+                  </tr>
+
+                  <tr>
+                    <td>メンター</td>
+                    <td class="">±０</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="bg-green">＋１</td>
+                    <td class="">±０</td>
+                  </tr>
+
+                  <tr>
+                    <td>イノセンス</td>
+                    <td class="">±０</td>
+                    <td class="">±０</td>
+                    <td class="">±０</td>
+                    <td class="">±０</td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+          </section>
+
         </div>
 
-        <!-- クラスごとのステータス -->
-        <section>
-          <div class="sticky">
-            <h3>
-              クラスごとのステータス
-            </h3>
-          </div>
+      </section>
 
-          <div class="contents">
-            <div class="inner_contents">
-              <p>
-                　ステータスは、表層クラスと深層クラスの両方の値を合算して求めます。<br>
-                　各ステータスの初期値は１なので、それに以下の値を足してください。
-              </p>
-            </div>
+      <!-- -------------------------------------------------- -->
+      <!-- 【４】スキル -->
+      <!-- -------------------------------------------------- -->
 
-            <table class="table-evenly">
-              <tbody>
-                <tr>
-                  <th>クラス</th>
-                  <th class="">〈勇気〉</th>
-                  <th class="">〈知恵〉</th>
-                  <th class="">〈愛情〉</th>
-                  <th class="">〈自制〉</th>
-                </tr>
+      <section id="arts">
 
-                <tr>
-                  <td>アジテイター</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
-                  <td class="">±０</td>
-                  <td class="bg-green">＋１</td>
-                </tr>
-
-                <tr>
-                  <td>パッショニスタ</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
-                </tr>
-
-                <tr>
-                  <td>ジーニアス</td>
-                  <td class="">±０</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
-                  <td class="bg-green">＋１</td>
-                </tr>
-
-                <tr>
-                  <td>トリックスター</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
-                  <td class="">±０</td>
-                </tr>
-
-                <tr>
-                  <td>サーヴァント</td>
-                  <td class="">±０</td>
-                  <td class="">±０</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="bg-green">＋１</td>
-                </tr>
-
-                <tr>
-                  <td>メンター</td>
-                  <td class="">±０</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="bg-green">＋１</td>
-                  <td class="">±０</td>
-                </tr>
-
-                <tr>
-                  <td>イノセンス</td>
-                  <td class="">±０</td>
-                  <td class="">±０</td>
-                  <td class="">±０</td>
-                  <td class="">±０</td>
-                </tr>
-
-              </tbody>
-            </table>
-
-          </div>
-        </section>
-
-      </div>
-    </section>
-
-    <!-- 【４】スキル -->
-    <section id="arts">
-      <div class="sticky">
-        <h2>
-          <span class="num">4</span>スキル
-        </h2>
-      </div>
-
-      <div class="contents">
-        <div class="inner_contents">
-          <p>
-            　
-          </p>
+        <div class="sticky">
+          <h2>
+            <span class="num">4</span>スキル
+          </h2>
         </div>
 
-        <!-- 基本スキルの自動習得 -->
-        <section id="arts-general">
-          <div class="sticky">
-            <h3>
-              <span class="num">4-2</span>基本スキルの自動習得
-            </h3>
-          </div>
+        <div class="contents">
 
-          <div class="contents">
-            <div class="rule_text">
-              <p>
-                　【調査】【交流】【干渉】【拒絶】を習得します。
-              </p>
+          <!-- 基本スキルの自動習得 -->
+          <section id="arts-general">
+            <div class="sticky">
+              <h3>
+                <span class="num">4-2</span>基本スキルの自動習得
+              </h3>
+            </div>
 
-              <div class="area-button">
-                <a class="link_button" href="./data_arts.html#auto_addition" target="_blank">基本スキルを確認する</a>
+            <div class="contents">
+              <div class="rule_text">
+                <p>
+                  　【調査】【交流】【干渉】【拒絶】を習得します。
+                </p>
+
+                <div class="area-button">
+                  <a class="link_button" href="./data_skill.html" target="_blank">基本スキルを確認する</a>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- 表層スキルの習得 -->
-        <section id="arts-primary">
-          <div class="sticky">
-            <h3>
-              <span class="num">4-3</span>表層スキルの習得
-            </h3>
-          </div>
+          <!-- 表層スキルの習得 -->
+          <section id="arts-primary">
+            <div class="sticky">
+              <h3>
+                <span class="num">4-3</span>表層スキルの習得
+              </h3>
+            </div>
 
-          <div class="contents">
-            <div class="rule_text">
-              <p>
-                　表層クラスのスキルを２つ習得します。
-              </p>
+            <div class="contents">
+              <div class="rule_text">
+                <p>
+                  　表層クラスのスキルを２つ習得します。
+                </p>
 
-              <div class="area-button">
-                <a class="link_button" href="./data_arts.html#arts-class" target="_blank">クラス専用スキルを確認する</a>
+                <div class="area-button">
+                  <a class="link_button" href="./data_skill.html" target="_blank">クラス専用スキルを確認する</a>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- 深層スキルの習得 -->
-        <section id="arts-free">
-          <div class="sticky">
-            <h3>
-              <span class="num">4-4</span>深層スキルの習得
-            </h3>
-          </div>
+          <!-- 深層スキルの習得 -->
+          <section id="arts-secondary">
+            <div class="sticky">
+              <h3>
+                <span class="num">4-4</span>深層スキルの習得
+              </h3>
+            </div>
 
-          <div class="contents">
-            <div class="rule_text">
-              <p>
-                　深層クラスのスキルを２つ習得します。
-              </p>
+            <div class="contents">
+              <div class="rule_text">
+                <p>
+                  　深層クラスのスキルを２つ習得します。
+                </p>
 
-              <div class="area-button">
-                <a class="link_button" href="./data_arts.html#arts-class" target="_blank">クラス専用スキルを確認する</a>
+                <div class="area-button">
+                  <a class="link_button" href="./data_skill.html" target="_blank">クラス専用スキルを確認する</a>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-      </div>
-    </section>
+        </div>
 
-    <!-- 【EX】リビルド -->
-    <section id="rebuild">
-      <div class="sticky">
-        <h2>
-          <span class="num">EX</span>リビルド
-        </h2>
-      </div>
+      </section>
 
-      <div class="contents">
-        <div class="inner_contents">
+      <!-- -------------------------------------------------- -->
+      <!-- 【EX】リビルド -->
+      <!-- -------------------------------------------------- -->
+
+      <section id="rebuild">
+
+        <div class="sticky">
+          <h2>
+            <span class="num">EX</span>リビルド
+          </h2>
+        </div>
+
+        <div class="contents">
           <p>
             　セッションとセッションの間、表層クラスを別のものに変更することが可能です。
           </p>
         </div>
 
-      </div>
-    </section>
+      </section>
 
+    </div>
   </main>
 </body>
 
