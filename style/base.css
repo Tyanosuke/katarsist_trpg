@@ -26,7 +26,7 @@
   --header-height: 60px;
 
   /* スティッキーロウ：高さ */
-  --sticky-row-height: 80px;
+  --sticky-top: calc(var(--header-height) + 16px);
 
   /* メインカラー */
   --color-main: rgba(50, 100, 130, 100%);
@@ -63,8 +63,21 @@
 }
 
 /* 文字色：赤 */
-.t-red {
-  color: #c00 !important;
+span.t-red {
+  padding: 4px;
+  background: #fcc !important;
+}
+
+/* 文字色：青 */
+span.t-blue {
+  padding: 4px;
+  background: #ccf !important;
+}
+
+/* 文字色：緑 */
+span.t-green {
+  padding: 4px;
+  background: #cfc !important;
 }
 
 /* 文字色：メイン */
@@ -194,6 +207,7 @@ h2,
 h3,
 h4 {
   display: flex;
+  height: var(--header-height);
   margin: 0;
   align-items: center;
 }
@@ -202,7 +216,7 @@ h4 {
 h2 {
   background: var(--color-main);
   border-radius: 8px 8px 0 0;
-  padding: 8px 16px;
+  padding: 0 16px;
   color: #fff;
 }
 
@@ -211,16 +225,15 @@ h3 {
   border-bottom: solid 3px var(--color-main);
   border-left: solid 15px var(--color-main);
   margin-top: 16px;
-  padding: 8px 0 8px 16px;
+  padding: 0 16px;
   color: var(--color-main);
 }
 
 /* 見出し４ */
 h4 {
   margin: 0;
-  margin-bottom: 0.5em;
-  padding: 4px;
   border-bottom: solid 2px var(--color-main);
+  color: var(--color-main);
 }
 
 /* -------------------------------------------------- */
@@ -276,8 +289,7 @@ h4 {
   display: flex;
   background: var(--color-bg);
   width: 100%;
-  height: var(--sticky-row-height);
-  padding-top: 1em;
+  padding-top: 24px;
   box-sizing: border-box;
   position: sticky;
   top: 0;
@@ -295,16 +307,21 @@ h4 {
 /* スティッキーロウ：２段目 */
 .contents .sticky {
   background: #fff;
-  height: var(--sticky-row-height);
   padding: 0;
-  padding-top: 16px;
-  top: var(--sticky-row-height);
+  padding-top: 24px;
+  top: var(--sticky-top);
   z-index: 1;
 }
 
 /* -------------------------------------------------- */
 /* タグジャンプ */
 /* -------------------------------------------------- */
+
+/* セクション */
+section {
+  margin-top: calc(var(--sticky-top) * -1) !important;
+  padding-top: var(--sticky-top) !important;
+}
 
 /* 強調表示 */
 .flash>h2,
@@ -443,8 +460,12 @@ table {
   border-radius: 8px;
   border-spacing: 4px;
   width: 100%;
-  margin-top: 16px;
   padding: 8px;
+}
+
+/* テーブル：間隔 */
+*+table {
+  margin-top: 16px;
 }
 
 /* セル */
@@ -453,6 +474,21 @@ table>tbody>tr>* {
   padding: 8px;
   text-align: center;
   line-height: 1.25;
+}
+
+/* 文字色：赤 */
+table>tbody>tr>*.t-red {
+  color: #fdd !important;
+}
+
+/* 文字色：青 */
+table>tbody>tr>*.t-blue {
+  color: #ddf !important;
+}
+
+/* 文字色：緑 */
+table>tbody>tr>*.t-green {
+  color: #dfd !important;
 }
 
 /* セル：緑 */

@@ -1,0 +1,536 @@
+<head>
+  <title>判定 - 心界カタルシス</title>
+
+  <link rel="stylesheet" href="style/base.css" type="text/css" />
+  <link rel="stylesheet" href="style/rule.css" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>判定</h1>
+
+    <a class="button-prev" href="index.html">戻る</a>
+  </header>
+
+  <main>
+    <div class="detail">
+
+      <!-- 判定の処理 -->
+      <section id="roll">
+
+        <div class="sticky">
+          <h2>
+            判定の処理
+          </h2>
+        </div>
+
+        <div class="contents">
+
+          <p>
+            　セッション中、ＰＣは<span class="keyword">判定</span>を求められることがあります。これは、ＰＣの行動が思った通りに成功するか、あるいは失敗するかを決定するものです。
+            <br>
+            　判定は、以下の順番で処理を行います。
+          </p>
+
+          <p class="list_container">
+            <span class="num">1</span><a href="#roll-1">判定内容の宣言</a><br>
+            <span class="num">2</span><a href="#roll-2">判定ダイスを振る</a><br>
+            <span class="num">3</span><a href="#roll-3">使用ステータスの選択</a><br>
+            <span class="num">4</span><a href="#roll-4">達成値の算出</a><br>
+            <span class="num">5</span><a href="#roll-5">成否決定</a>
+          </p>
+
+          <!-- 判定内容の宣言 -->
+          <section id="roll-1">
+
+            <div class="sticky">
+              <h3>
+                <span class="num">1</span>判定内容の宣言
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　ＧＭは、その判定における<span class="keyword">適正ステータス</span>と<span class="keyword">目標値</span>を宣言します。<br>
+                　適正ステータスは、〈勇気〉〈知恵〉〈愛情〉のいずれかか、〈任意〉を指定します。これらは、<span class="num">3</span><a href="#roll-4">達成値の算出</a>の際に使用されます。<br>
+                　目標値は、<span class="num">5</span><a href="#roll-5">成否決定</a>の際に使用されます。<br>
+                　これらは判定対象に応じて決定します。ルールブックのデータセクションや、シナリオに記載されているものを参照してください。<br>
+                <br>
+                　ルール上では、『〈任意〉４の判定』や『〈勇気〉３の判定』のような形で表記されます。
+              </p>
+            </div>
+
+          </section>
+
+          <!-- 判定ダイスを振る -->
+          <section id="roll-2">
+
+            <div class="sticky">
+              <h3>
+                <span class="num">2</span>判定ダイスを振る
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　ＰＣたちは、常に６面ダイスを４つ共有しています。これを<span class="keyword">判定ダイス</span>と呼びます。<br>
+                <br>
+                　判定ＰＣは、判定ダイスを振ってください。<br>
+                　この際、判定ＰＣの〈自制〉の値と同じ個数のダイスを『振らない』という選択ができます。これを<span class="keyword">キープ</span>と呼びます。<br>
+                　キープしたもの以外のダイスを全て振った後、出目の中の、［１］と［２］を〈勇気〉、［３］と［４］を〈知恵〉、［５］と［６］を〈愛情〉に対応するダイスとして、それぞれ数えます。<br>
+                　出目とステータスの対応を分かりやすくするため、ダイス置き場を３つ用意し、それぞれに対応するダイスを置くようにすると良いでしょう。
+              </p>
+
+              <table>
+                <tbody>
+                  <tr>
+                    <th>出目</th>
+                    <th>対応ステータス</th>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="t-red">［１］［２］</span>
+                    </td>
+
+                    <td>
+                      〈勇気〉
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="t-blue">［３］［４］</span>
+                    </td>
+
+                    <td>
+                      〈知恵〉
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <span class="t-green">［５］［６］</span>
+                    </td>
+
+                    <td>
+                      〈愛情〉
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+
+          </section>
+
+          <!-- 使用ステータスの選択 -->
+          <section id="roll-3">
+
+            <div class="sticky">
+              <h3>
+                <span class="num">3</span>使用ステータスの選択
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　判定ＰＣは、〈勇気〉〈知恵〉〈愛情〉から１つ選び、それを<span class="keyword">使用ステータス</span>とします。<br>
+                　これは後述の達成値に影響するので、そちらの詳細を確認した上で選択すると良いでしょう。
+              </p>
+            </div>
+
+          </section>
+
+          <!-- 達成値の算出 -->
+          <section id="roll-4">
+
+            <div class="sticky">
+              <h3>
+                <span class="num">4</span>達成値の算出
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　使用ステータスの値と、使用ステータスに対応するダイスの数を合計します。それを<span class="keyword">達成値</span>とします。<br>
+                　使用ステータスと適正ステータスが異なっていると、達成値が１点減少します。適正ステータスが〈任意〉となっている場合、どのステータスを使用しても達成値の減少はありません。<br>
+                　また、使用ステータスに対応するダイスが１つも無かった場合、達成値は『０』に固定されます。
+              </p>
+            </div>
+
+          </section>
+
+          <!-- 成否決定 -->
+          <section id="roll-5">
+
+            <div class="sticky">
+              <h3>
+                <span class="num">5</span>成否決定
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　達成値が目標値以上の場合、<span class="keyword">成功</span>とします。そうでなければ、<span class="keyword">失敗</span>とします。<br>
+                　ＧＭは、それらに応じた処理を行ってください。
+              </p>
+
+              <!-- 例 -->
+              <section>
+
+                <h4>
+                  例
+                </h4>
+
+                <div class="contents">
+                  <table>
+                    <tbody>
+
+                      <!-- -------------------------------------------------- -->
+                      <!-- 見出し -->
+                      <!-- -------------------------------------------------- -->
+
+                      <tr>
+
+                        <th>
+                          判定の内容
+                        </th>
+
+                        <th>
+                          判定ダイス
+                        </th>
+
+                        <th>
+                          使用<br>
+                          ステータス
+                        </th>
+
+                        <th>
+                          対応<br>
+                          ダイス数
+                        </th>
+
+                        <th>
+                          適正
+                        </th>
+
+                        <th>
+                          達成値
+                        </th>
+
+                        <th>
+                          成否
+                        </th>
+
+                      </tr>
+
+                      <!-- -------------------------------------------------- -->
+                      <!-- 〈任意〉４ -->
+                      <!-- -------------------------------------------------- -->
+
+                      <tr>
+
+                        <td rowspan="3">
+                          〈任意〉４
+                        </td>
+
+                        <td rowspan="3">
+                          <span class="t-red">［１］</span><span class="t-blue">［３］［４］</span><span class="t-green">［６］</span>
+                        </td>
+
+                        <td>
+                          〈勇気〉３
+                        </td>
+
+                        <td>
+                          １
+                        </td>
+
+                        <td>
+                          ±０
+                        </td>
+
+                        <td>
+                          ４
+                        </td>
+
+                        <td>
+                          成功
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                          〈知恵〉１
+                        </td>
+
+                        <td>
+                          ２
+                        </td>
+
+                        <td>
+                          ±０
+                        </td>
+
+                        <td>
+                          ３
+                        </td>
+
+                        <td>
+                          失敗
+                        </td>
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                          〈愛情〉２
+                        </td>
+
+                        <td>
+                          １
+                        </td>
+
+                        <td>
+                          ±０
+                        </td>
+
+                        <td>
+                          ３
+                        </td>
+
+                        <td>
+                          失敗
+                        </td>
+                      </tr>
+
+                      <!-- -------------------------------------------------- -->
+                      <!-- 〈勇気〉３ -->
+                      <!-- -------------------------------------------------- -->
+
+                      <tr>
+
+                        <td rowspan="3">
+                          〈勇気〉３
+                        </td>
+
+                        <td rowspan="3">
+                          <span class="t-red">［１］［２］</span><span class="t-blue">［４］［４］</span>
+                        </td>
+
+                        <td>
+                          〈勇気〉３
+                        </td>
+
+                        <td>
+                          ２
+                        </td>
+
+                        <td>
+                          ±０
+                        </td>
+
+                        <td>
+                          ５
+                        </td>
+
+                        <td>
+                          成功
+                        </td>
+
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                          〈知恵〉１
+                        </td>
+
+                        <td>
+                          ２
+                        </td>
+
+                        <td>
+                          －１
+                        </td>
+
+                        <td>
+                          ２
+                        </td>
+
+                        <td>
+                          失敗
+                        </td>
+                      </tr>
+
+                      <tr>
+
+                        <td>
+                          〈愛情〉２
+                        </td>
+
+                        <td>
+                          ０
+                        </td>
+
+                        <td>
+                          －１
+                        </td>
+
+                        <td>
+                          ０
+                        </td>
+
+                        <td>
+                          失敗
+                        </td>
+                      </tr>
+
+                      <!-- -------------------------------------------------- -->
+
+                    </tbody>
+                  </table>
+                </div>
+
+              </section>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </section>
+
+      <!-- ステータス変化 -->
+      <section id="status_up_down">
+
+        <div class="sticky">
+          <h2>
+            ステータス変化
+          </h2>
+        </div>
+
+        <div class="contents">
+
+          <p>
+            　ＰＣのステータスは、スキルやエネミーアクションの効果によって増減することがあります。<br>
+            　これらは【｛ステータス｝：｛符号（＋／－）｝｛レベル｝】のように表記されます。
+          </p>
+
+          <!-- ステータス -->
+          <section id="status_plus">
+
+            <div class="sticky">
+              <h3>
+                ステータス
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　『勇気』や『知恵』などの、増減するステータスの名称が入ります。
+              </p>
+            </div>
+
+          </section>
+
+          <!-- 符号（＋／－） -->
+          <section id="status_plus">
+
+            <div class="sticky">
+              <h3>
+                符号（＋／－）
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　ステータスが上昇するか、低下するかを示します。<br>
+                　符号に応じて、<span class="keyword">プラスのステータス変化</span>や<span class="keyword">マイナスのステータス変化</span>という呼び方をします。
+              </p>
+            </div>
+
+          </section>
+
+          <!-- レベル -->
+          <section id="status_plus">
+
+            <div class="sticky">
+              <h3>
+                レベル
+              </h3>
+            </div>
+
+            <div class="contents">
+              <p>
+                　そのステータスの増減量を<span class="keyword">レベル</span>と呼びます。<br>
+                　また、これは継続期間も表しており、ターン終了時に１点ずつ減少していきます。
+              </p>
+            </div>
+
+          </section>
+
+          <!-- 表記と効果の例 -->
+          <section>
+
+            <div class="sticky">
+              <h3>
+                表記と効果の例
+              </h3>
+            </div>
+
+            <div class="contents">
+              <table>
+                <tr>
+                  <th rowspan="2">表記</th>
+                  <th colspan="4">効果</th>
+                </tr>
+
+                <tr>
+                  <th>１ターン目</th>
+                  <th>２ターン目</th>
+                  <th>３ターン目</th>
+                  <th>４ターン目</th>
+                </tr>
+
+                <tr>
+                  <td>【勇気：＋１】</td>
+                  <td>＋１</td>
+                  <td>‐</td>
+                  <td>‐</td>
+                  <td>‐</td>
+                </tr>
+
+                <tr>
+                  <td>【知恵：＋２】</td>
+                  <td>＋２</td>
+                  <td>＋１</td>
+                  <td>‐</td>
+                  <td>‐</td>
+                </tr>
+
+                <tr>
+                  <td>【愛情：－３】</td>
+                  <td>－３</td>
+                  <td>－２</td>
+                  <td>－１</td>
+                  <td>‐</td>
+                </tr>
+              </table>
+            </div>
+
+          </section>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+
+<script src="js/script.js"></script>
